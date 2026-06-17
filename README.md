@@ -8,7 +8,7 @@ The motivating example is David Deutsch's contrast between mythic explanations o
 
 ![Deutsch-style explanation loop](assets/experiment-loop.svg)
 
-Interactive explainer: https://abryfs.github.io/deutsch-ai-discovery/docs/
+Interactive explainer: https://abryfs.github.io/deutsch-ai-discovery/
 
 ## What This Proves
 
