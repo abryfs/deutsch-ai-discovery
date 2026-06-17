@@ -1,0 +1,196 @@
+{
+  "seed": 17,
+  "model": "gemini-2.5-flash",
+  "base_url": "https://generativelanguage.googleapis.com/v1beta",
+  "public_observations": [
+    {
+      "case": {
+        "turn": 0,
+        "realm": "north",
+        "distance": "near",
+        "moon": "bright",
+        "wind": "restless"
+      },
+      "outcome": "wake",
+      "myth": "When Freyja polishes her necklace, stands near the hearth, and the ravens quarrel, upper fjord: the gardens stir."
+    },
+    {
+      "case": {
+        "turn": 3,
+        "realm": "south",
+        "distance": "near",
+        "moon": "bright",
+        "wind": "restless"
+      },
+      "outcome": "sleep",
+      "myth": "When Freyja polishes her necklace, stands near the hearth, and the ravens quarrel, lower fjord: the gardens sleep."
+    },
+    {
+      "case": {
+        "turn": 2,
+        "realm": "north",
+        "distance": "far",
+        "moon": "dark",
+        "wind": "restless"
+      },
+      "outcome": "wake",
+      "myth": "When Freyja hides her necklace, stands behind the veil, and the ravens quarrel, upper fjord: the gardens stir."
+    },
+    {
+      "case": {
+        "turn": 2,
+        "realm": "south",
+        "distance": "near",
+        "moon": "dark",
+        "wind": "still"
+      },
+      "outcome": "bloom",
+      "myth": "When Freyja hides her necklace, stands near the hearth, and the ravens rest, lower fjord: the gardens bloom."
+    },
+    {
+      "case": {
+        "turn": 6,
+        "realm": "south",
+        "distance": "far",
+        "moon": "bright",
+        "wind": "still"
+      },
+      "outcome": "sleep",
+      "myth": "When Freyja polishes her necklace, stands behind the veil, and the ravens rest, lower fjord: the gardens sleep."
+    },
+    {
+      "case": {
+        "turn": 3,
+        "realm": "south",
+        "distance": "near",
+        "moon": "dark",
+        "wind": "restless"
+      },
+      "outcome": "wake",
+      "myth": "When Freyja hides her necklace, stands near the hearth, and the ravens quarrel, lower fjord: the gardens stir."
+    },
+    {
+      "case": {
+        "turn": 4,
+        "realm": "south",
+        "distance": "near",
+        "moon": "bright",
+        "wind": "still"
+      },
+      "outcome": "wake",
+      "myth": "When Freyja polishes her necklace, stands near the hearth, and the ravens rest, lower fjord: the gardens stir."
+    },
+    {
+      "case": {
+        "turn": 9,
+        "realm": "north",
+        "distance": "near",
+        "moon": "dark",
+        "wind": "still"
+      },
+      "outcome": "wake",
+      "myth": "When Freyja hides her necklace, stands near the hearth, and the ravens rest, upper fjord: the gardens stir."
+    }
+  ],
+  "holdout_truth": {
+    "{'turn': 5, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+    "{'turn': 6, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "sleep",
+    "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 0, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "bloom",
+    "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake"
+  },
+  "transfer_truth": {
+    "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+    "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "sleep",
+    "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+    "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 5, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 8, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+    "{'turn': 0, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 5, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake"
+  },
+  "holdout_predictions": {
+    "{'turn': 5, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+    "{'turn': 6, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
+    "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 0, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake"
+  },
+  "transfer_predictions": {
+    "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
+    "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+    "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 5, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 8, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+    "{'turn': 0, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 5, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake"
+  },
+  "holdout_accuracy": 0.75,
+  "transfer_reach": 0.75,
+  "truth_score": 0.75,
+  "explanation": {
+    "agent": "gemini-2.5-flash",
+    "title": "Causal factors for garden states",
+    "causal_terms": [
+      "Freyja's necklace state (a): r0 (hides her necklace), r1 (polishes her necklace)",
+      "Freyja's location (b): d0 (stands near the hearth), d1 (stands behind the veil)",
+      "Ravens' state (c): m0 (the ravens rest), m1 (the ravens quarrel)",
+      "Fjord location (e): w0 (lower fjord), w1 (upper fjord)"
+    ],
+    "text": "The gardens bloom if and only if Freyja polishes her necklace (a=r1), stands near the hearth (b=d0), the ravens rest (c=m0), and it is the lower fjord (e=w0).\nThe gardens sleep if Freyja polishes her necklace (a=r1) and the ravens quarrel (c=m1), AND either she stands near the hearth in the upper fjord (b=d0, e=w1) OR she stands behind the veil in the lower fjord (b=d1, e=w0).\nIn all other circumstances, the gardens stir (wake).",
+    "falsifier": "None",
+    "arbitrary_clauses": 0,
+    "decisive_tests": []
+  },
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are participating in a sealed discovery benchmark. Infer a causal explanation from observations, then predict hidden cases. Return only valid JSON."
+    },
+    {
+      "role": "user",
+      "content": "Public observations:\ncase | outcome | myth\n--- | --- | ---\nstep=0, a=r0, b=d0, c=m1, e=w1 | wake | When Freyja polishes her necklace, stands near the hearth, and the ravens quarrel, upper fjord: the gardens stir.\nstep=3, a=r1, b=d0, c=m1, e=w1 | sleep | When Freyja polishes her necklace, stands near the hearth, and the ravens quarrel, lower fjord: the gardens sleep.\nstep=2, a=r0, b=d1, c=m0, e=w1 | wake | When Freyja hides her necklace, stands behind the veil, and the ravens quarrel, upper fjord: the gardens stir.\nstep=2, a=r1, b=d0, c=m0, e=w0 | bloom | When Freyja hides her necklace, stands near the hearth, and the ravens rest, lower fjord: the gardens bloom.\nstep=6, a=r1, b=d1, c=m1, e=w0 | sleep | When Freyja polishes her necklace, stands behind the veil, and the ravens rest, lower fjord: the gardens sleep.\nstep=3, a=r1, b=d0, c=m0, e=w1 | wake | When Freyja hides her necklace, stands near the hearth, and the ravens quarrel, lower fjord: the gardens stir.\nstep=4, a=r1, b=d0, c=m1, e=w0 | wake | When Freyja polishes her necklace, stands near the hearth, and the ravens rest, lower fjord: the gardens stir.\nstep=9, a=r0, b=d0, c=m0, e=w0 | wake | When Freyja hides her necklace, stands near the hearth, and the ravens rest, upper fjord: the gardens stir.\n\nAllowed outcomes: sleep, wake, bloom.\n\nPredict each holdout and transfer case. Use the exact case strings as keys.\n\nHoldout cases:\nstep=5, a=r1, b=d1, c=m1, e=w0\nstep=6, a=r0, b=d1, c=m0, e=w0\nstep=3, a=r0, b=d1, c=m1, e=w0\nstep=2, a=r1, b=d1, c=m1, e=w1\nstep=0, a=r0, b=d0, c=m1, e=w0\nstep=2, a=r0, b=d0, c=m1, e=w1\nstep=4, a=r1, b=d1, c=m1, e=w1\nstep=0, a=r0, b=d1, c=m0, e=w1\n\nTransfer cases:\nstep=0, a=r0, b=d1, c=m1, e=w1\nstep=0, a=r0, b=d1, c=m0, e=w0\nstep=3, a=r0, b=d1, c=m0, e=w1\nstep=1, a=r0, b=d1, c=m1, e=w0\nstep=5, a=r1, b=d1, c=m1, e=w1\nstep=8, a=r1, b=d1, c=m1, e=w0\nstep=0, a=r1, b=d1, c=m1, e=w1\nstep=5, a=r1, b=d0, c=m0, e=w1\n\nReturn JSON with keys: title, causal_terms, explanation, falsifier, arbitrary_clauses, holdout_predictions, transfer_predictions."
+    }
+  ],
+  "raw_response": "{\n  \"title\": \"Causal factors for garden states\",\n  \"causal_terms\": [\n    \"Freyja's necklace state (a): r0 (hides her necklace), r1 (polishes her necklace)\",\n    \"Freyja's location (b): d0 (stands near the hearth), d1 (stands behind the veil)\",\n    \"Ravens' state (c): m0 (the ravens rest), m1 (the ravens quarrel)\",\n    \"Fjord location (e): w0 (lower fjord), w1 (upper fjord)\"\n  ],\n  \"explanation\": \"The gardens bloom if and only if Freyja polishes her necklace (a=r1), stands near the hearth (b=d0), the ravens rest (c=m0), and it is the lower fjord (e=w0).\\nThe gardens sleep if Freyja polishes her necklace (a=r1) and the ravens quarrel (c=m1), AND either she stands near the hearth in the upper fjord (b=d0, e=w1) OR she stands behind the veil in the lower fjord (b=d1, e=w0).\\nIn all other circumstances, the gardens stir (wake).\",\n  \"falsifier\": \"None\",\n  \"arbitrary_clauses\": \"The 'step' variable does not influence the outcome.\",\n  \"holdout_predictions\": {\n    \"step=5, a=r1, b=d1, c=m1, e=w0\": \"sleep\",\n    \"step=6, a=r0, b=d1, c=m0, e=w0\": \"wake\",\n    \"step=3, a=r0, b=d1, c=m1, e=w0\": \"wake\",\n    \"step=2, a=r1, b=d1, c=m1, e=w1\": \"wake\",\n    \"step=0, a=r0, b=d0, c=m1, e=w0\": \"wake\",\n    \"step=2, a=r0, b=d0, c=m1, e=w1\": \"wake\",\n    \"step=4, a=r1, b=d1, c=m1, e=w1\": \"wake\",\n    \"step=0, a=r0, b=d1, c=m0, e=w1\": \"wake\"\n  },\n  \"transfer_predictions\": {\n    \"step=0, a=r0, b=d1, c=m1, e=w1\": \"wake\",\n    \"step=0, a=r0, b=d1, c=m0, e=w0\": \"wake\",\n    \"step=3, a=r0, b=d1, c=m0, e=w1\": \"wake\",\n    \"step=1, a=r0, b=d1, c=m1, e=w0\": \"wake\",\n    \"step=5, a=r1, b=d1, c=m1, e=w1\": \"wake\",\n    \"step=8, a=r1, b=d1, c=m1, e=w0\": \"sleep\",\n    \"step=0, a=r1, b=d1, c=m1, e=w1\": \"wake\",\n    \"step=5, a=r1, b=d0, c=m0, e=w1\": \"wake\"\n  }\n}",
+  "parsed_response": {
+    "title": "Causal factors for garden states",
+    "causal_terms": [
+      "Freyja's necklace state (a): r0 (hides her necklace), r1 (polishes her necklace)",
+      "Freyja's location (b): d0 (stands near the hearth), d1 (stands behind the veil)",
+      "Ravens' state (c): m0 (the ravens rest), m1 (the ravens quarrel)",
+      "Fjord location (e): w0 (lower fjord), w1 (upper fjord)"
+    ],
+    "explanation": "The gardens bloom if and only if Freyja polishes her necklace (a=r1), stands near the hearth (b=d0), the ravens rest (c=m0), and it is the lower fjord (e=w0).\nThe gardens sleep if Freyja polishes her necklace (a=r1) and the ravens quarrel (c=m1), AND either she stands near the hearth in the upper fjord (b=d0, e=w1) OR she stands behind the veil in the lower fjord (b=d1, e=w0).\nIn all other circumstances, the gardens stir (wake).",
+    "falsifier": "None",
+    "arbitrary_clauses": "The 'step' variable does not influence the outcome.",
+    "holdout_predictions": {
+      "step=5, a=r1, b=d1, c=m1, e=w0": "sleep",
+      "step=6, a=r0, b=d1, c=m0, e=w0": "wake",
+      "step=3, a=r0, b=d1, c=m1, e=w0": "wake",
+      "step=2, a=r1, b=d1, c=m1, e=w1": "wake",
+      "step=0, a=r0, b=d0, c=m1, e=w0": "wake",
+      "step=2, a=r0, b=d0, c=m1, e=w1": "wake",
+      "step=4, a=r1, b=d1, c=m1, e=w1": "wake",
+      "step=0, a=r0, b=d1, c=m0, e=w1": "wake"
+    },
+    "transfer_predictions": {
+      "step=0, a=r0, b=d1, c=m1, e=w1": "wake",
+      "step=0, a=r0, b=d1, c=m0, e=w0": "wake",
+      "step=3, a=r0, b=d1, c=m0, e=w1": "wake",
+      "step=1, a=r0, b=d1, c=m1, e=w0": "wake",
+      "step=5, a=r1, b=d1, c=m1, e=w1": "wake",
+      "step=8, a=r1, b=d1, c=m1, e=w0": "sleep",
+      "step=0, a=r1, b=d1, c=m1, e=w1": "wake",
+      "step=5, a=r1, b=d0, c=m0, e=w1": "wake"
+    }
+  },
+  "hidden_config": "seed=17, family=interaction, period=10, axial_phase=4, heat_lag=2, weights=(axial=2.37, distance=0.71, moon=-0.32, wind=0.25, interaction=0.98)"
+}

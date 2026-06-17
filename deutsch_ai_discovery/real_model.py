@@ -6,6 +6,7 @@ from dataclasses import fields, is_dataclass
 from pathlib import Path
 from typing import Any
 
+from .gemini import GeminiClient, GeminiConfig
 from .models import Explanation, WorldCase, observations_as_table
 from .openrouter import OpenRouterClient, OpenRouterConfig
 from .scoring import accuracy
@@ -13,7 +14,7 @@ from .world import HiddenWorld, OUTCOMES
 
 
 def run_real_model_experiment(
-    client: OpenRouterClient,
+    client: OpenRouterClient | GeminiClient,
     seed: int,
     public_count: int,
     holdout_count: int,
@@ -39,15 +40,23 @@ def run_real_model_experiment(
     )
     raw_response = client.chat(messages)
     parsed = parse_model_response(raw_response)
-    holdout_predictions = _predictions_from_response(parsed.get("holdout_predictions", {}), holdout_cases)
-    transfer_predictions = _predictions_from_response(parsed.get("transfer_predictions", {}), transfer_cases)
+    holdout_predictions = _predictions_from_response(
+        parsed.get("holdout_predictions", {}),
+        holdout_cases,
+        opaque_only=opaque_public,
+    )
+    transfer_predictions = _predictions_from_response(
+        parsed.get("transfer_predictions", {}),
+        transfer_cases,
+        opaque_only=opaque_public,
+    )
     explanation = Explanation(
         agent=client.config.model,
         title=str(parsed.get("title", "model explanation")),
         causal_terms=tuple(str(term) for term in parsed.get("causal_terms", [])),
         text=str(parsed.get("explanation", "")),
         falsifier=str(parsed.get("falsifier", "")),
-        arbitrary_clauses=int(parsed.get("arbitrary_clauses", 0) or 0),
+        arbitrary_clauses=_coerce_int(parsed.get("arbitrary_clauses", 0)),
     )
 
     return {
@@ -125,7 +134,8 @@ def render_real_model_markdown(result: dict[str, object]) -> str:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Run a real OpenRouter-compatible model on one hidden world.")
+    parser = argparse.ArgumentParser(description="Run a real model on one hidden world.")
+    parser.add_argument("--provider", choices=("openrouter", "gemini"), default="openrouter")
     parser.add_argument("--seed", type=int, default=17)
     parser.add_argument("--public-count", type=int, default=10)
     parser.add_argument("--holdout-count", type=int, default=40)
@@ -133,7 +143,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--opaque-public", action="store_true")
     args = parser.parse_args(argv)
 
-    client = OpenRouterClient(OpenRouterConfig.from_env())
+    client = _client_from_provider(args.provider)
     result = run_real_model_experiment(
         client=client,
         seed=args.seed,
@@ -146,6 +156,12 @@ def main(argv: list[str] | None = None) -> int:
     print(f"Report: {markdown_path}")
     print(f"Transcript: {json_path}")
     return 0
+
+
+def _client_from_provider(provider: str) -> OpenRouterClient | GeminiClient:
+    if provider == "gemini":
+        return GeminiClient(GeminiConfig.from_env())
+    return OpenRouterClient(OpenRouterConfig.from_env())
 
 
 def _build_messages(
@@ -186,18 +202,31 @@ def _case_lines(cases: list[WorldCase], opaque_public: bool) -> str:
     return "\n".join(case.opaque_key() if opaque_public else case.public_key() for case in cases)
 
 
-def _predictions_from_response(raw_predictions: object, cases: list[WorldCase]) -> dict[WorldCase, str]:
+def _predictions_from_response(
+    raw_predictions: object,
+    cases: list[WorldCase],
+    opaque_only: bool = False,
+) -> dict[WorldCase, str]:
     if not isinstance(raw_predictions, dict):
         return {}
     by_public_key = {case.public_key(): case for case in cases}
     by_opaque_key = {case.opaque_key(): case for case in cases}
     predictions: dict[WorldCase, str] = {}
     for raw_case, raw_outcome in raw_predictions.items():
-        case = by_public_key.get(str(raw_case)) or by_opaque_key.get(str(raw_case))
+        case = by_opaque_key.get(str(raw_case))
+        if case is None and not opaque_only:
+            case = by_public_key.get(str(raw_case))
         outcome = str(raw_outcome)
         if case is not None and outcome in OUTCOMES:
             predictions[case] = outcome
     return predictions
+
+
+def _coerce_int(value: object) -> int:
+    try:
+        return int(value or 0)
+    except (TypeError, ValueError):
+        return 0
 
 
 def _jsonable(value: object) -> object:

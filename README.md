@@ -8,6 +8,8 @@ The motivating example is David Deutsch's contrast between mythic explanations o
 
 ![Deutsch-style explanation loop](assets/experiment-loop.svg)
 
+Interactive explainer: https://abryfs.github.io/deutsch-ai-discovery/docs/
+
 ## What This Proves
 
 This is not a proof of open-ended AI science. It is a small, falsifiable testbed.
@@ -98,6 +100,32 @@ python3 -m deutsch_ai_discovery.real_model --seed 17 --opaque-public
 
 This writes a real-model report and the full prompt/response transcript under `reports/`. The model sees public observations and unlabeled cases only. The hidden oracle scores predictions afterward.
 
+For Gemini:
+
+```bash
+export GEMINI_API_KEY="your-key"
+export GEMINI_MODEL="gemini-2.5-flash"
+
+python3 -m deutsch_ai_discovery.real_model --provider gemini --seed 17 --opaque-public
+```
+
+Current tiny Gemini run, seed `17`, `public-count=8`, `holdout-count=8`:
+
+- One-shot Gemini: truth `0.750`
+- Three-round Gemini loop: truth `0.750`
+
+The loop successfully requested valid oracle tests, but this seed does not show an advantage over one-shot prediction.
+
+## Run The Real Critique Loop
+
+The one-shot real-model runner is not enough to test the core claim. The multi-round loop lets the model request oracle tests before final scoring:
+
+```bash
+python3 -m deutsch_ai_discovery.real_loop --provider gemini --seed 17 --rounds 3 --opaque-public
+```
+
+![Multi-round real model loop](assets/real-llm-loop.svg)
+
 ## Agents Compared
 
 The harness compares four agents:
@@ -111,4 +139,4 @@ The harness compares four agents:
 
 The current agents are still hand-built heuristics, not real LLM agents. The hypothesis space is wider than the first version, but it is still supplied by the benchmark designer. The transfer world is still a related toy world, not a radically new domain. This project currently tests the structure of a Deutsch-style discovery loop more than it proves autonomous AI discovery.
 
-The real-model runner is the first bridge to LLM testing, but it is still a single-pass predictor. The next serious step is a multi-round LLM loop where the model proposes risky tests, receives oracle results, and revises its explanation without seeing the hidden rule.
+The real-model runner is the first bridge to LLM testing. The multi-round loop is the first implementation of the actual conjecture, criticism, oracle feedback, and revision cycle, but it still needs multi-seed and multi-model runs before making a strong claim.

@@ -10,6 +10,7 @@ dependencies = []
 deutsch-discovery = "deutsch_ai_discovery.experiment:main"
 deutsch-benchmark = "deutsch_ai_discovery.benchmark:main"
 deutsch-real-model = "deutsch_ai_discovery.real_model:main"
+deutsch-real-loop = "deutsch_ai_discovery.real_loop:main"
 
 [tool.pytest.ini_options]
 pythonpath = ["."]

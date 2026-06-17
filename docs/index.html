@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deutsch AI Discovery</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --line: #cbd5e1;
+        --blue: #2563eb;
+        --green: #16a34a;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #020617;
+          --card: #0f172a;
+          --text: #e2e8f0;
+          --muted: #94a3b8;
+          --line: #334155;
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+      header, main {
+        width: min(1080px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+      header { padding: 64px 0 28px; }
+      h1 { font-size: clamp(40px, 8vw, 82px); line-height: 0.95; margin: 0 0 18px; letter-spacing: -0.06em; }
+      h2 { font-size: 28px; margin: 0 0 14px; letter-spacing: -0.03em; }
+      p { color: var(--muted); font-size: 17px; line-height: 1.65; }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 28px;
+        align-items: center;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 24px;
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+      }
+      .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 18px;
+      }
+      .metric {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 16px;
+      }
+      .metric strong { display: block; font-size: 28px; }
+      .metric span { color: var(--muted); font-size: 13px; }
+      .tabs {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin: 18px 0;
+      }
+      button {
+        border: 1px solid var(--line);
+        background: var(--card);
+        color: var(--text);
+        border-radius: 999px;
+        padding: 10px 14px;
+        cursor: pointer;
+        font-weight: 650;
+      }
+      button.active {
+        border-color: var(--blue);
+        background: var(--blue);
+        color: #fff;
+      }
+      .stage {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 20px;
+        align-items: start;
+      }
+      .badge {
+        display: inline-block;
+        border-radius: 999px;
+        padding: 6px 10px;
+        background: rgba(37, 99, 235, 0.12);
+        color: var(--blue);
+        font-size: 13px;
+        font-weight: 700;
+      }
+      img { max-width: 100%; border-radius: 18px; border: 1px solid var(--line); background: #fff; }
+      code {
+        display: block;
+        overflow-x: auto;
+        background: #020617;
+        color: #e2e8f0;
+        border-radius: 16px;
+        padding: 16px;
+        line-height: 1.5;
+      }
+      section { margin: 28px 0; }
+      a { color: var(--blue); font-weight: 700; }
+      @media (max-width: 860px) {
+        .hero, .stage { grid-template-columns: 1fr; }
+        .metric-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="hero">
+        <div>
+          <span class="badge">Sealed oracle experiment</span>
+          <h1>Can AI improve explanations?</h1>
+          <p>
+            This project turns David Deutsch's idea of good explanations into a small benchmark:
+            conjecture, criticize, test, revise, then score on hidden cases.
+          </p>
+          <p><a href="https://github.com/abryfs/deutsch-ai-discovery">View the GitHub repo</a></p>
+        </div>
+        <div class="card">
+          <h2>First real model run</h2>
+          <p>Gemini 2.5 Flash, seed 17, one-shot and 3-round loop both reached this score on a tiny run.</p>
+          <div class="metric-grid">
+            <div class="metric"><strong>0.750</strong><span>truth score</span></div>
+            <div class="metric"><strong>0.750</strong><span>holdout accuracy</span></div>
+            <div class="metric"><strong>0.750</strong><span>transfer reach</span></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Interactive Walkthrough</h2>
+        <div class="tabs" id="tabs"></div>
+        <div class="stage">
+          <div><span class="badge" id="stage-label"></span></div>
+          <div>
+            <h2 id="stage-title"></h2>
+            <p id="stage-copy"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>The loop we need next</h2>
+        <img src="../assets/real-llm-loop.svg" alt="Multi-round real model oracle loop" />
+        <p>
+          The important upgrade is letting the real model ask for risky tests from the
+          experimentable pool before it predicts hidden holdout and transfer cases.
+          On the first small seed, the loop successfully requested three oracle tests,
+          but did not outperform the one-shot run. That is why multi-seed evaluation is next.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Try it locally</h2>
+        <code>export GEMINI_API_KEY="your-key"
+python3 -m deutsch_ai_discovery.real_loop --provider gemini --seed 17 --rounds 3 --opaque-public</code>
+      </section>
+    </main>
+
+    <script>
+      const stages = [
+        ["1", "Hidden world", "A synthetic world is generated after the run starts. The hidden causal rule is not shown to the model."],
+        ["2", "Public myths", "The model receives a small table of observations expressed as Freyja-like stories and opaque case labels."],
+        ["3", "Risky tests", "In the multi-round loop, the model picks exact experimentable cases where rival explanations should disagree."],
+        ["4", "Oracle feedback", "The oracle reveals only the outcome for the requested experiment case, never the hidden rule."],
+        ["5", "Reach score", "Only after the loop ends do we score holdout and transfer cases that were never queryable."]
+      ];
+      const tabs = document.getElementById("tabs");
+      const label = document.getElementById("stage-label");
+      const title = document.getElementById("stage-title");
+      const copy = document.getElementById("stage-copy");
+      function render(index) {
+        [...tabs.children].forEach((button, idx) => button.classList.toggle("active", idx === index));
+        label.textContent = `Stage ${stages[index][0]}`;
+        title.textContent = stages[index][1];
+        copy.textContent = stages[index][2];
+      }
+      stages.forEach((stage, index) => {
+        const button = document.createElement("button");
+        button.textContent = stage[1];
+        button.addEventListener("click", () => render(index));
+        tabs.appendChild(button);
+      });
+      render(0);
+    </script>
+  </body>
+</html>

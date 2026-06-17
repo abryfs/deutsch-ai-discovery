@@ -1,9 +1,18 @@
 from __future__ import annotations
 
 import unittest
+from unittest.mock import patch
 
+from deutsch_ai_discovery.gemini import _extract_text
 from deutsch_ai_discovery.openrouter import OpenRouterClient, OpenRouterConfig
-from deutsch_ai_discovery.real_model import parse_model_response, run_real_model_experiment
+from deutsch_ai_discovery.models import WorldCase
+from deutsch_ai_discovery.real_model import (
+    _client_from_provider,
+    _coerce_int,
+    _predictions_from_response,
+    parse_model_response,
+    run_real_model_experiment,
+)
 
 
 class FakeOpenRouterClient(OpenRouterClient):
@@ -56,6 +65,41 @@ class RealModelTests(unittest.TestCase):
         self.assertIn("Public observations", client.last_messages[-1]["content"])
         self.assertGreaterEqual(result["truth_score"], 0.0)
         self.assertLessEqual(result["truth_score"], 1.0)
+
+    def test_extracts_gemini_text(self) -> None:
+        text = _extract_text(
+            {
+                "candidates": [
+                    {
+                        "content": {
+                            "parts": [
+                                {"text": '{"title":"ok"}'},
+                            ]
+                        }
+                    }
+                ]
+            }
+        )
+
+        self.assertEqual(text, '{"title":"ok"}')
+
+    def test_provider_switch_requires_known_provider(self) -> None:
+        with patch.dict("os.environ", {"OPENROUTER_API_KEY": "test-key"}, clear=False):
+            self.assertEqual(_client_from_provider("openrouter").config.model, "openai/gpt-4o-mini")
+
+    def test_coerces_non_numeric_arbitrary_clause_count(self) -> None:
+        self.assertEqual(_coerce_int("None"), 0)
+
+    def test_opaque_scoring_rejects_semantic_keys(self) -> None:
+        case = WorldCase(turn=1, realm="north", distance="near", moon="dark", wind="still")
+
+        predictions = _predictions_from_response(
+            {case.public_key(): "sleep"},
+            [case],
+            opaque_only=True,
+        )
+
+        self.assertEqual(predictions, {})
 
 
 def _extract_cases(prompt: str, start: str, end: str) -> list[str]:
