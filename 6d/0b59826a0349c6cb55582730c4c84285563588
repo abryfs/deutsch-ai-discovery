@@ -1,0 +1,25 @@
+docs/index.html
+  s_fe2fcdae39751b::t_dc502b46a816c4 160
+docs/assets/real-llm-loop.svg
+  s_fe2fcdae39751b::t_efdd0fd1697926 1-39
+README.md
+  s_fe2fcdae39751b::t_bfba841e9615be 11
+.github/workflows/pages.yml
+  s_fe2fcdae39751b::t_2ed4e037d26a5d 28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.8",
+  "base_commit_sha": "6d0b59826a0349c6cb55582730c4c84285563588",
+  "prompts": {},
+  "sessions": {
+    "s_fe2fcdae39751b": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "3a5e2761-fe1c-4ef0-991f-f3b8d0168bbc",
+        "model": "gpt-5.5"
+      },
+      "human_author": "abryfs <69842068+abryfs@users.noreply.github.com>"
+    }
+  }
+}
