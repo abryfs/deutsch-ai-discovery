@@ -1,0 +1,19 @@
+index.html
+  s_fe2fcdae39751b::t_add27fea29f615 1-5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.8",
+  "base_commit_sha": "0b342e2ea8c5cd6fa6ea046c85eec0c4965d0fb5",
+  "prompts": {},
+  "sessions": {
+    "s_fe2fcdae39751b": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "3a5e2761-fe1c-4ef0-991f-f3b8d0168bbc",
+        "model": "gpt-5.5"
+      },
+      "human_author": "abryfs <69842068+abryfs@users.noreply.github.com>"
+    }
+  }
+}
