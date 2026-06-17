@@ -35,7 +35,22 @@ def run_real_loop_experiment(
     transfer_world = world.transfer_world()
     observations = [world.observe(case) for case in public_cases]
     available_tests = list(experiment_cases)
+    holdout_truth = {case: world.outcome(case) for case in holdout_cases}
+    transfer_truth = {case: transfer_world.outcome(case) for case in transfer_cases}
     loop_steps: list[dict[str, object]] = []
+    trajectory: list[dict[str, object]] = [
+        _score_snapshot(
+            client=client,
+            observations=observations,
+            holdout_cases=holdout_cases,
+            transfer_cases=transfer_cases,
+            holdout_truth=holdout_truth,
+            transfer_truth=transfer_truth,
+            opaque_public=opaque_public,
+            round_index=0,
+            label="initial",
+        )
+    ]
 
     for round_index in range(1, rounds + 1):
         messages = _test_request_messages(
@@ -67,37 +82,25 @@ def run_real_loop_experiment(
                 "oracle_observation": oracle_observation,
             }
         )
+        # Diagnostic scoring must never feed predictions, scores, or holdout cases
+        # back into later oracle-test prompts.
+        trajectory.append(
+            _score_snapshot(
+                client=client,
+                observations=observations,
+                holdout_cases=holdout_cases,
+                transfer_cases=transfer_cases,
+                holdout_truth=holdout_truth,
+                transfer_truth=transfer_truth,
+                opaque_public=opaque_public,
+                round_index=round_index,
+                label=f"after round {round_index}",
+            )
+        )
 
-    final_messages = _final_prediction_messages(
-        observations=observations,
-        holdout_cases=holdout_cases,
-        transfer_cases=transfer_cases,
-        opaque_public=opaque_public,
-    )
-    raw_final = client.chat(final_messages)
-    parsed_final = parse_model_response(raw_final)
-    holdout_truth = {case: world.outcome(case) for case in holdout_cases}
-    transfer_truth = {case: transfer_world.outcome(case) for case in transfer_cases}
-    holdout_predictions = _predictions_from_response(
-        parsed_final.get("holdout_predictions", {}),
-        holdout_cases,
-        opaque_only=opaque_public,
-    )
-    transfer_predictions = _predictions_from_response(
-        parsed_final.get("transfer_predictions", {}),
-        transfer_cases,
-        opaque_only=opaque_public,
-    )
-    explanation = Explanation(
-        agent=client.config.model,
-        title=str(parsed_final.get("title", "model explanation")),
-        causal_terms=tuple(str(term) for term in parsed_final.get("causal_terms", [])),
-        text=str(parsed_final.get("explanation", "")),
-        falsifier=str(parsed_final.get("falsifier", "")),
-        arbitrary_clauses=_coerce_int(parsed_final.get("arbitrary_clauses", 0)),
-    )
-    holdout_accuracy = accuracy(holdout_predictions, holdout_truth)
-    transfer_reach = accuracy(transfer_predictions, transfer_truth)
+    _annotate_deltas(trajectory)
+    final_snapshot = trajectory[-1]
+    explanation = final_snapshot["explanation"]
 
     return {
         "seed": seed,
@@ -110,16 +113,18 @@ def run_real_loop_experiment(
         "acquired_observations": observations[public_count:],
         "holdout_truth": holdout_truth,
         "transfer_truth": transfer_truth,
-        "holdout_predictions": holdout_predictions,
-        "transfer_predictions": transfer_predictions,
-        "holdout_accuracy": holdout_accuracy,
-        "transfer_reach": transfer_reach,
-        "truth_score": holdout_accuracy * 0.65 + transfer_reach * 0.35,
+        "holdout_predictions": final_snapshot["holdout_predictions"],
+        "transfer_predictions": final_snapshot["transfer_predictions"],
+        "holdout_accuracy": final_snapshot["holdout_accuracy"],
+        "transfer_reach": final_snapshot["transfer_reach"],
+        "truth_score": final_snapshot["truth_score"],
         "explanation": explanation,
         "loop_steps": loop_steps,
-        "final_messages": final_messages,
-        "raw_final_response": raw_final,
-        "parsed_final_response": parsed_final,
+        "trajectory": trajectory,
+        "trajectory_summary": _trajectory_summary(trajectory),
+        "final_messages": final_snapshot["messages"],
+        "raw_final_response": final_snapshot["raw_response"],
+        "parsed_final_response": final_snapshot["parsed_response"],
         "hidden_config": world.reveal_config(),
     }
 
@@ -146,9 +151,34 @@ def render_real_loop_markdown(result: dict[str, object]) -> str:
         f"Holdout accuracy: `{result['holdout_accuracy']:.3f}`",
         f"Transfer reach: `{result['transfer_reach']:.3f}`",
         "",
-        "## Oracle Loop",
+        "## Score Trajectory",
         "",
+        "round | label | truth | holdout | transfer | delta",
+        "---: | --- | ---: | ---: | ---: | ---:",
     ]
+    for item in result["trajectory"]:
+        delta = item.get("delta_from_previous")
+        delta_text = "" if delta is None else f"{delta:.3f}"
+        lines.append(
+            f"{item['round']} | {item['label']} | {item['truth_score']:.3f} | "
+            f"{item['holdout_accuracy']:.3f} | {item['transfer_reach']:.3f} | {delta_text}"
+        )
+    summary = result["trajectory_summary"]
+    lines.extend(
+        [
+            "",
+            f"Initial to final delta: `{summary['total_delta']:.3f}`",
+            f"Best truth score: `{summary['best_score']:.3f}` diagnostic only",
+            f"Positive delta steps: `{summary['sustained_improvement_count']}`",
+            f"Max consecutive positive deltas: `{summary['max_consecutive_positive_deltas']}`",
+            f"Regression steps: `{summary['regression_count']}`",
+            "",
+            "The headline score is the final row, not the best intermediate row.",
+            "",
+            "## Oracle Loop",
+            "",
+        ]
+    )
     for step in result["loop_steps"]:
         observation = step["oracle_observation"]
         if observation is None:
@@ -179,6 +209,102 @@ def render_real_loop_markdown(result: dict[str, object]) -> str:
     return "\n".join(lines)
 
 
+def _score_snapshot(
+    client: ModelClient,
+    observations: list[Observation],
+    holdout_cases: list[WorldCase],
+    transfer_cases: list[WorldCase],
+    holdout_truth: dict[WorldCase, str],
+    transfer_truth: dict[WorldCase, str],
+    opaque_public: bool,
+    round_index: int,
+    label: str,
+) -> dict[str, object]:
+    messages = _final_prediction_messages(
+        observations=observations,
+        holdout_cases=holdout_cases,
+        transfer_cases=transfer_cases,
+        opaque_public=opaque_public,
+    )
+    raw_response = client.chat(messages)
+    parsed = parse_model_response(raw_response)
+    holdout_predictions = _predictions_from_response(
+        parsed.get("holdout_predictions", {}),
+        holdout_cases,
+        opaque_only=opaque_public,
+    )
+    transfer_predictions = _predictions_from_response(
+        parsed.get("transfer_predictions", {}),
+        transfer_cases,
+        opaque_only=opaque_public,
+    )
+    holdout_accuracy = accuracy(holdout_predictions, holdout_truth)
+    transfer_reach = accuracy(transfer_predictions, transfer_truth)
+    explanation = Explanation(
+        agent=client.config.model,
+        title=str(parsed.get("title", "model explanation")),
+        causal_terms=tuple(str(term) for term in parsed.get("causal_terms", [])),
+        text=str(parsed.get("explanation", "")),
+        falsifier=str(parsed.get("falsifier", "")),
+        arbitrary_clauses=_coerce_int(parsed.get("arbitrary_clauses", 0)),
+    )
+    return {
+        "round": round_index,
+        "label": label,
+        "observation_count": len(observations),
+        "holdout_predictions": holdout_predictions,
+        "transfer_predictions": transfer_predictions,
+        "holdout_accuracy": holdout_accuracy,
+        "transfer_reach": transfer_reach,
+        "truth_score": holdout_accuracy * 0.65 + transfer_reach * 0.35,
+        "explanation": explanation,
+        "messages": messages,
+        "raw_response": raw_response,
+        "parsed_response": parsed,
+    }
+
+
+def _annotate_deltas(trajectory: list[dict[str, object]]) -> None:
+    previous: float | None = None
+    for item in trajectory:
+        score = float(item["truth_score"])
+        item["delta_from_previous"] = None if previous is None else score - previous
+        previous = score
+
+
+def _trajectory_summary(trajectory: list[dict[str, object]]) -> dict[str, object]:
+    scores = [float(item["truth_score"]) for item in trajectory]
+    deltas = [
+        float(item["delta_from_previous"])
+        for item in trajectory[1:]
+        if item.get("delta_from_previous") is not None
+    ]
+    return {
+        "initial_score": scores[0],
+        "final_score": scores[-1],
+        "best_score": max(scores),
+        "total_delta": scores[-1] - scores[0],
+        "improved_over_initial": scores[-1] > scores[0],
+        "sustained_improvement_count": sum(1 for delta in deltas if delta > 0),
+        "max_consecutive_positive_deltas": _max_consecutive_positive_deltas(deltas),
+        "regression_count": sum(1 for delta in deltas if delta < 0),
+        "monotonic_non_decreasing": all(delta >= 0 for delta in deltas),
+        "deltas": deltas,
+    }
+
+
+def _max_consecutive_positive_deltas(deltas: list[float]) -> int:
+    best = 0
+    current = 0
+    for delta in deltas:
+        if delta > 0:
+            current += 1
+            best = max(best, current)
+        else:
+            current = 0
+    return best
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Run a multi-round real model discovery loop.")
     parser.add_argument("--provider", choices=("openrouter", "gemini"), default="openrouter")
@@ -200,7 +326,13 @@ def main(argv: list[str] | None = None) -> int:
         opaque_public=args.opaque_public,
     )
     markdown_path, json_path = write_real_loop_report(result, args.output_dir)
-    print(f"Real loop run complete: truth={result['truth_score']:.3f}")
+    summary = result["trajectory_summary"]
+    print(
+        "Real loop run complete: "
+        f"truth={result['truth_score']:.3f}, "
+        f"delta={summary['total_delta']:.3f}, "
+        f"regressions={summary['regression_count']}"
+    )
     print(f"Report: {markdown_path}")
     print(f"Transcript: {json_path}")
     return 0

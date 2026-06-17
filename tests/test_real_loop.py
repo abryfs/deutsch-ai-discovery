@@ -4,7 +4,7 @@ import json
 import unittest
 
 from deutsch_ai_discovery.openrouter import OpenRouterClient, OpenRouterConfig
-from deutsch_ai_discovery.real_loop import run_real_loop_experiment
+from deutsch_ai_discovery.real_loop import _annotate_deltas, _trajectory_summary, run_real_loop_experiment
 
 
 class FakeLoopClient(OpenRouterClient):
@@ -49,8 +49,9 @@ class FakeLoopClient(OpenRouterClient):
 
 class RealLoopTests(unittest.TestCase):
     def test_real_loop_acquires_only_experiment_observations(self) -> None:
+        client = FakeLoopClient()
         result = run_real_loop_experiment(
-            client=FakeLoopClient(),
+            client=client,
             seed=17,
             public_count=6,
             holdout_count=4,
@@ -62,9 +63,52 @@ class RealLoopTests(unittest.TestCase):
         acquired = {observation.case for observation in result["acquired_observations"]}
 
         self.assertEqual(len(result["loop_steps"]), 2)
+        self.assertEqual(len(result["trajectory"]), 3)
+        self.assertEqual(result["trajectory"][0]["label"], "initial")
+        self.assertEqual([item["observation_count"] for item in result["trajectory"]], [6, 7, 8])
+        self.assertIn("total_delta", result["trajectory_summary"])
         self.assertFalse(scored & acquired)
         self.assertGreaterEqual(result["truth_score"], 0.0)
         self.assertLessEqual(result["truth_score"], 1.0)
+        self.assertEqual(result["truth_score"], result["trajectory_summary"]["final_score"])
+        self.assertEqual(result["holdout_predictions"], result["trajectory"][-1]["holdout_predictions"])
+        self.assertEqual(result["transfer_predictions"], result["trajectory"][-1]["transfer_predictions"])
+
+        prediction_prompts = [call[-1]["content"] for call in client.calls if "Holdout cases:" in call[-1]["content"]]
+        test_prompts = [call[-1]["content"] for call in client.calls if "Experimentable cases:" in call[-1]["content"]]
+        self.assertEqual(len(prediction_prompts), 3)
+        self.assertEqual(len(test_prompts), 2)
+        for prompt in test_prompts:
+            self.assertNotIn("Holdout cases:", prompt)
+            self.assertNotIn("Transfer cases:", prompt)
+            self.assertNotIn("truth score", prompt.lower())
+            self.assertNotIn("delta", prompt.lower())
+        for prompt in prediction_prompts:
+            self.assertIn("Holdout cases:", prompt)
+            self.assertIn("Transfer cases:", prompt)
+            self.assertNotIn("Experimentable cases:", prompt)
+
+    def test_trajectory_summary_semantics(self) -> None:
+        trajectory = [
+            {"truth_score": 0.20},
+            {"truth_score": 0.35},
+            {"truth_score": 0.40},
+            {"truth_score": 0.30},
+            {"truth_score": 0.45},
+        ]
+        _annotate_deltas(trajectory)
+
+        summary = _trajectory_summary(trajectory)
+
+        self.assertEqual(summary["initial_score"], 0.20)
+        self.assertEqual(summary["final_score"], 0.45)
+        self.assertEqual(summary["best_score"], 0.45)
+        self.assertAlmostEqual(summary["total_delta"], 0.25)
+        self.assertTrue(summary["improved_over_initial"])
+        self.assertEqual(summary["sustained_improvement_count"], 3)
+        self.assertEqual(summary["max_consecutive_positive_deltas"], 2)
+        self.assertEqual(summary["regression_count"], 1)
+        self.assertFalse(summary["monotonic_non_decreasing"])
 
 
 def _first_case_after(prompt: str, marker: str) -> str:

@@ -54,7 +54,7 @@
       }
       .metric-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 12px;
         margin-top: 18px;
       }
@@ -132,11 +132,12 @@
         </div>
         <div class="card">
           <h2>First real model run</h2>
-          <p>Gemini 2.5 Flash, seed 17, one-shot and 3-round loop both reached this score on a tiny run.</p>
+          <p>Gemini 2.5 Flash, seed 17. The next metric is whether the score keeps improving across rounds.</p>
           <div class="metric-grid">
             <div class="metric"><strong>0.750</strong><span>truth score</span></div>
             <div class="metric"><strong>0.750</strong><span>holdout accuracy</span></div>
             <div class="metric"><strong>0.750</strong><span>transfer reach</span></div>
+            <div class="metric"><strong>curve</strong><span>next evidence</span></div>
           </div>
         </div>
       </div>
@@ -162,7 +163,8 @@
           The important upgrade is letting the real model ask for risky tests from the
           experimentable pool before it predicts hidden holdout and transfer cases.
           On the first small seed, the loop successfully requested three oracle tests,
-          but did not outperform the one-shot run. That is why multi-seed evaluation is next.
+          but did not outperform the one-shot run. The next report tracks the score after
+          every round, so we can ask whether error correction keeps producing progress.
         </p>
       </section>
 
@@ -179,7 +181,8 @@ python3 -m deutsch_ai_discovery.real_loop --provider gemini --seed 17 --rounds 3
         ["2", "Public myths", "The model receives a small table of observations expressed as Freyja-like stories and opaque case labels."],
         ["3", "Risky tests", "In the multi-round loop, the model picks exact experimentable cases where rival explanations should disagree."],
         ["4", "Oracle feedback", "The oracle reveals only the outcome for the requested experiment case, never the hidden rule."],
-        ["5", "Reach score", "Only after the loop ends do we score holdout and transfer cases that were never queryable."]
+        ["5", "Trajectory", "The model is rescored after each oracle result, producing an improvement curve rather than a single final number."],
+        ["6", "Reach score", "Only hidden holdout and transfer cases count toward the truth score; they are never queryable."]
       ];
       const tabs = document.getElementById("tabs");
       const label = document.getElementById("stage-label");

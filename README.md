@@ -124,6 +124,19 @@ The one-shot real-model runner is not enough to test the core claim. The multi-r
 python3 -m deutsch_ai_discovery.real_loop --provider gemini --seed 17 --rounds 3 --opaque-public
 ```
 
+The loop report now includes a score trajectory:
+
+- round `0`: prediction score before any oracle feedback
+- round `1..N`: score after each requested oracle test
+- total delta from initial to final
+- best score reached, reported as diagnostic only
+- positive delta count and maximum consecutive positive deltas
+- regression count
+
+This asks a stronger question than `0 -> 1`: once a model improves an explanation, can it keep improving rather than merely patching one case?
+The trajectory scoring calls are diagnostic only. Their prompts and scores are never fed back into later oracle-test prompts.
+The headline score remains the final post-oracle score, not the best intermediate score.
+
 ![Multi-round real model loop](assets/real-llm-loop.svg)
 
 ## Agents Compared
