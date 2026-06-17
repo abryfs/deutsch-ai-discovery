@@ -1,0 +1,29 @@
+pyproject.toml
+  s_fe2fcdae39751b::t_cb4ed445303bcb 12
+tests/test_real_model.py
+  s_fe2fcdae39751b::t_5dc30903046ab2 1-72
+deutsch_ai_discovery/openrouter.py
+  s_fe2fcdae39751b::t_23e7ad50852ba6 1-71
+deutsch_ai_discovery/real_model.py
+  s_fe2fcdae39751b::t_45eb41fb85eeff 1-209
+README.md
+  s_fe2fcdae39751b::t_41fe576e90c66c 83-96,110
+.cursor/rules/grok-math-review.mdc
+  s_fe2fcdae39751b::t_7c1f9141cda7fc 1-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.8",
+  "base_commit_sha": "425802eda3f60649ca76ef50ba99f9ed17530420",
+  "prompts": {},
+  "sessions": {
+    "s_fe2fcdae39751b": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "3a5e2761-fe1c-4ef0-991f-f3b8d0168bbc",
+        "model": "gpt-5.5"
+      },
+      "human_author": "abryfs <69842068+abryfs@users.noreply.github.com>"
+    }
+  }
+}
