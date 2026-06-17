@@ -1,0 +1,47 @@
+docs/index.html
+  s_fe2fcdae39751b::t_9f981e1db725ed 125-126,128-129,134-135,137-140,160,163-165,179-180,182-183
+README.md
+  s_fe2fcdae39751b::t_7dc2e4f4fb0fe2 63-68,71,92
+  s_fe2fcdae39751b::t_835adcbf2aa41d 128,133
+  s_fe2fcdae39751b::t_a8297cc3839692 5,7,13,15,17,19-20,22,26-29,38-39,89,93-103,117,160,164-166,171
+tests/test_real_model.py
+  s_fe2fcdae39751b::t_f8f8e0d2ebaa00 66-68
+tests/test_real_loop.py
+  s_fe2fcdae39751b::t_b6c2d47ab8bb61 86-88,93-95
+deutsch_ai_discovery/agents.py
+  s_fe2fcdae39751b::t_cdea1c94f4a1cc 4,154,164,182-270,336-337
+reports/report_seed_17.md
+  s_fe2fcdae39751b::t_01266a0970cdf9 6-12,15-26,32-37,43,45,47,49,77,79,81,83,85,95-136,154,184,190,194-221
+tests/test_experiment.py
+  s_fe2fcdae39751b::t_8069026f6657fa 88-97,113-114
+deutsch_ai_discovery/real_loop.py
+  s_fe2fcdae39751b::t_b44471742b4125 189
+reports/transcript_seed_17.json
+  s_fe2fcdae39751b::t_01266a0970cdf9 159-165,168-174,176-179,181-182,184,186-189,191,194,196,836,838-839,841-842,844,850-851,853-854,856,868,872-873,876,879,881-883,888,890-893,895-1138,1240-1269,1274,1278,1284,1288,1294,1298
+deutsch_ai_discovery/models.py
+  s_fe2fcdae39751b::t_512b9ea5977e69 93-98,101
+deutsch_ai_discovery/experiment.py
+  s_fe2fcdae39751b::t_4d6ef40e90e5fd 243-247
+  s_fe2fcdae39751b::t_9e12a658acdc8c 136,216-220
+  s_fe2fcdae39751b::t_e6c2a82aa699b9 84-90
+deutsch_ai_discovery/benchmark.py
+  s_fe2fcdae39751b::t_107c74acbf80ca 60-66
+deutsch_ai_discovery/world.py
+  s_fe2fcdae39751b::t_cd2b4516f1923f 37-38,126-127,131,133-138
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.8",
+  "base_commit_sha": "b11aa448d2ee6b6788bbbe143475b91771cfbe74",
+  "prompts": {},
+  "sessions": {
+    "s_fe2fcdae39751b": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "3a5e2761-fe1c-4ef0-991f-f3b8d0168bbc",
+        "model": "gpt-5.5"
+      },
+      "human_author": "abryfs <69842068+abryfs@users.noreply.github.com>"
+    }
+  }
+}
