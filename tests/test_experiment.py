@@ -22,14 +22,43 @@ class ExperimentTests(unittest.TestCase):
 
     def test_critique_agent_requests_decisive_tests(self) -> None:
         world = HiddenWorld.generate(42)
-        public = world.sample_public_observations(count=8, seed=43)
-        holdout, _ = world.split_holdouts(count=12, seed=44)
+        public_cases, holdout, _transfer, experiment_cases = world.partition_cases(
+            public_count=8,
+            holdout_count=12,
+            transfer_count=12,
+            seed=43,
+        )
+        public = [world.observe(case) for case in public_cases]
 
-        run = DeutschCritiqueAgent().run(world, public, holdout, rounds=3)
+        run = DeutschCritiqueAgent().run(world, public, holdout, experiment_cases, rounds=3)
 
         self.assertTrue(run.critiques)
         self.assertLessEqual(len(run.acquired_observations), 3)
         self.assertTrue(run.final.falsifier)
+
+    def test_case_partitions_are_disjoint(self) -> None:
+        world = HiddenWorld.generate(42)
+        public, holdout, transfer, experiment = world.partition_cases(
+            public_count=8,
+            holdout_count=12,
+            transfer_count=12,
+            seed=43,
+        )
+
+        self.assertFalse(set(public) & set(holdout))
+        self.assertFalse(set(public) & set(transfer))
+        self.assertFalse(set(public) & set(experiment))
+        self.assertFalse(set(holdout) & set(transfer))
+        self.assertFalse(set(holdout) & set(experiment))
+        self.assertFalse(set(transfer) & set(experiment))
+
+    def test_critique_agent_cannot_observe_scored_cases(self) -> None:
+        result = run_experiment(seed=17, rounds=4, public_count=8, holdout_count=12)
+        scored = set(result["holdout_truth"]) | set(result["transfer_truth"])
+        critique_run = next(run for run in result["runs"] if run.agent == "Deutsch critique loop")
+        acquired = {observation.case for observation in critique_run.acquired_observations}
+
+        self.assertFalse(scored & acquired)
 
     def test_experiment_produces_all_baseline_scores(self) -> None:
         result = run_experiment(seed=17, rounds=3, public_count=8, holdout_count=12)

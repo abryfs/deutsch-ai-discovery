@@ -114,49 +114,581 @@
     }
   ],
   "holdout_truth": {
-    "{'turn': 4, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
-    "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
-    "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "bloom",
-    "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
-    "{'turn': 6, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+    "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 0, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "bloom",
     "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
-    "{'turn': 6, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
-    "{'turn': 9, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+    "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+    "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+    "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "sleep",
     "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
-    "{'turn': 4, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
     "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
-    "{'turn': 2, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
-    "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
-    "{'turn': 5, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "bloom",
-    "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+    "{'turn': 5, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 8, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+    "{'turn': 0, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 5, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+    "{'turn': 6, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+    "{'turn': 0, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+    "{'turn': 6, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
     "{'turn': 5, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
-    "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
-    "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
-    "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+    "{'turn': 7, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+    "{'turn': 3, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 2, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+    "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 1, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+    "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+    "{'turn': 4, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "bloom",
+    "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+    "{'turn': 6, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+    "{'turn': 3, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+    "{'turn': 2, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 6, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+    "{'turn': 8, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+    "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 1, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+    "{'turn': 3, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
+    "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+    "{'turn': 2, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+    "{'turn': 9, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+    "{'turn': 3, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+    "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
     "{'turn': 0, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake"
   },
   "transfer_truth": {
-    "{'turn': 5, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
-    "{'turn': 7, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
-    "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "bloom",
-    "{'turn': 2, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
-    "{'turn': 9, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
-    "{'turn': 8, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
-    "{'turn': 8, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
-    "{'turn': 4, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
-    "{'turn': 8, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
-    "{'turn': 5, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
-    "{'turn': 5, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
-    "{'turn': 9, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
-    "{'turn': 0, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
-    "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
-    "{'turn': 6, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
-    "{'turn': 8, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "sleep",
-    "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
-    "{'turn': 0, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+    "{'turn': 7, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+    "{'turn': 5, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "sleep",
+    "{'turn': 6, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+    "{'turn': 4, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+    "{'turn': 5, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
     "{'turn': 0, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
-    "{'turn': 8, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "sleep"
+    "{'turn': 6, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 6, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 6, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 9, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+    "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
+    "{'turn': 5, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
+    "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+    "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+    "{'turn': 1, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+    "{'turn': 0, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+    "{'turn': 7, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 9, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
+    "{'turn': 9, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "bloom",
+    "{'turn': 9, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+    "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+    "{'turn': 8, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 5, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+    "{'turn': 9, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+    "{'turn': 0, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 6, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 1, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 5, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+    "{'turn': 7, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "sleep",
+    "{'turn': 3, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+    "{'turn': 0, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+    "{'turn': 8, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 4, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+    "{'turn': 8, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+    "{'turn': 9, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+    "{'turn': 7, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
+    "{'turn': 1, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+    "{'turn': 0, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake"
   },
+  "experiment_cases": [
+    {
+      "turn": 7,
+      "realm": "north",
+      "distance": "far",
+      "moon": "bright",
+      "wind": "restless"
+    },
+    {
+      "turn": 6,
+      "realm": "south",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 4,
+      "realm": "north",
+      "distance": "near",
+      "moon": "dark",
+      "wind": "restless"
+    },
+    {
+      "turn": 3,
+      "realm": "north",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 1,
+      "realm": "north",
+      "distance": "near",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 8,
+      "realm": "north",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 7,
+      "realm": "south",
+      "distance": "far",
+      "moon": "bright",
+      "wind": "restless"
+    },
+    {
+      "turn": 5,
+      "realm": "north",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "still"
+    },
+    {
+      "turn": 1,
+      "realm": "south",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "still"
+    },
+    {
+      "turn": 1,
+      "realm": "south",
+      "distance": "near",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 1,
+      "realm": "north",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 5,
+      "realm": "north",
+      "distance": "near",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 6,
+      "realm": "north",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "restless"
+    },
+    {
+      "turn": 8,
+      "realm": "north",
+      "distance": "near",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 3,
+      "realm": "south",
+      "distance": "far",
+      "moon": "bright",
+      "wind": "restless"
+    },
+    {
+      "turn": 1,
+      "realm": "north",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "still"
+    },
+    {
+      "turn": 9,
+      "realm": "north",
+      "distance": "near",
+      "moon": "dark",
+      "wind": "restless"
+    },
+    {
+      "turn": 4,
+      "realm": "south",
+      "distance": "near",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 9,
+      "realm": "south",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "restless"
+    },
+    {
+      "turn": 2,
+      "realm": "north",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 0,
+      "realm": "south",
+      "distance": "far",
+      "moon": "bright",
+      "wind": "still"
+    },
+    {
+      "turn": 4,
+      "realm": "north",
+      "distance": "far",
+      "moon": "bright",
+      "wind": "still"
+    },
+    {
+      "turn": 2,
+      "realm": "north",
+      "distance": "far",
+      "moon": "bright",
+      "wind": "still"
+    },
+    {
+      "turn": 5,
+      "realm": "south",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "still"
+    },
+    {
+      "turn": 8,
+      "realm": "north",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "restless"
+    },
+    {
+      "turn": 9,
+      "realm": "north",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 6,
+      "realm": "south",
+      "distance": "near",
+      "moon": "dark",
+      "wind": "restless"
+    },
+    {
+      "turn": 2,
+      "realm": "north",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "still"
+    },
+    {
+      "turn": 8,
+      "realm": "north",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "still"
+    },
+    {
+      "turn": 4,
+      "realm": "south",
+      "distance": "near",
+      "moon": "dark",
+      "wind": "restless"
+    },
+    {
+      "turn": 9,
+      "realm": "north",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "restless"
+    },
+    {
+      "turn": 8,
+      "realm": "south",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "restless"
+    },
+    {
+      "turn": 4,
+      "realm": "north",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 8,
+      "realm": "north",
+      "distance": "far",
+      "moon": "bright",
+      "wind": "still"
+    },
+    {
+      "turn": 8,
+      "realm": "south",
+      "distance": "near",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 6,
+      "realm": "north",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "still"
+    },
+    {
+      "turn": 1,
+      "realm": "south",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 6,
+      "realm": "north",
+      "distance": "far",
+      "moon": "bright",
+      "wind": "restless"
+    },
+    {
+      "turn": 5,
+      "realm": "north",
+      "distance": "far",
+      "moon": "bright",
+      "wind": "restless"
+    },
+    {
+      "turn": 0,
+      "realm": "north",
+      "distance": "near",
+      "moon": "dark",
+      "wind": "restless"
+    },
+    {
+      "turn": 9,
+      "realm": "north",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "restless"
+    },
+    {
+      "turn": 4,
+      "realm": "south",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 3,
+      "realm": "north",
+      "distance": "far",
+      "moon": "bright",
+      "wind": "restless"
+    },
+    {
+      "turn": 9,
+      "realm": "south",
+      "distance": "near",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 8,
+      "realm": "south",
+      "distance": "near",
+      "moon": "dark",
+      "wind": "restless"
+    },
+    {
+      "turn": 8,
+      "realm": "north",
+      "distance": "near",
+      "moon": "dark",
+      "wind": "restless"
+    },
+    {
+      "turn": 5,
+      "realm": "south",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "restless"
+    },
+    {
+      "turn": 3,
+      "realm": "north",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "restless"
+    },
+    {
+      "turn": 8,
+      "realm": "south",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 2,
+      "realm": "south",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "restless"
+    },
+    {
+      "turn": 3,
+      "realm": "south",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 2,
+      "realm": "south",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 8,
+      "realm": "north",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "restless"
+    },
+    {
+      "turn": 5,
+      "realm": "north",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "restless"
+    },
+    {
+      "turn": 1,
+      "realm": "south",
+      "distance": "far",
+      "moon": "bright",
+      "wind": "still"
+    },
+    {
+      "turn": 4,
+      "realm": "north",
+      "distance": "near",
+      "moon": "dark",
+      "wind": "still"
+    },
+    {
+      "turn": 9,
+      "realm": "south",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "still"
+    },
+    {
+      "turn": 4,
+      "realm": "north",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "restless"
+    },
+    {
+      "turn": 7,
+      "realm": "north",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "restless"
+    },
+    {
+      "turn": 4,
+      "realm": "south",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "restless"
+    },
+    {
+      "turn": 7,
+      "realm": "south",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "still"
+    },
+    {
+      "turn": 9,
+      "realm": "south",
+      "distance": "far",
+      "moon": "bright",
+      "wind": "restless"
+    },
+    {
+      "turn": 7,
+      "realm": "south",
+      "distance": "far",
+      "moon": "bright",
+      "wind": "still"
+    },
+    {
+      "turn": 7,
+      "realm": "south",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "restless"
+    },
+    {
+      "turn": 3,
+      "realm": "north",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "still"
+    },
+    {
+      "turn": 3,
+      "realm": "south",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "restless"
+    },
+    {
+      "turn": 5,
+      "realm": "north",
+      "distance": "far",
+      "moon": "dark",
+      "wind": "restless"
+    },
+    {
+      "turn": 7,
+      "realm": "north",
+      "distance": "near",
+      "moon": "bright",
+      "wind": "still"
+    },
+    {
+      "turn": 1,
+      "realm": "south",
+      "distance": "far",
+      "moon": "bright",
+      "wind": "restless"
+    },
+    {
+      "turn": 2,
+      "realm": "south",
+      "distance": "far",
+      "moon": "bright",
+      "wind": "still"
+    }
+  ],
   "runs": [
     {
       "agent": "myth-preserving storyteller",
@@ -183,25 +715,45 @@
         "The explanation is easy to vary because any surprise becomes a new mood."
       ],
       "predictions": {
-        "{'turn': 4, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
-        "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
-        "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
-        "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
-        "{'turn': 6, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
         "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
-        "{'turn': 6, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
-        "{'turn': 9, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
         "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
-        "{'turn': 4, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
         "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
-        "{'turn': 2, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
-        "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
-        "{'turn': 5, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
-        "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 5, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 8, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 0, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 5, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 6, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 6, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
         "{'turn': 5, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
-        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
-        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
-        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 7, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 3, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 1, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 4, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 6, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 3, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 6, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 8, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 1, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 3, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 2, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 9, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 3, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
         "{'turn': 0, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake"
       }
     },
@@ -238,25 +790,45 @@
         "It predicts labels but has no account of why these variables matter."
       ],
       "predictions": {
-        "{'turn': 4, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
-        "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
-        "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
-        "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
-        "{'turn': 6, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+        "{'turn': 0, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
         "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
-        "{'turn': 6, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
-        "{'turn': 9, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+        "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
         "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
-        "{'turn': 4, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
         "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
-        "{'turn': 2, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
-        "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
-        "{'turn': 5, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
-        "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+        "{'turn': 5, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+        "{'turn': 8, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+        "{'turn': 0, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+        "{'turn': 5, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+        "{'turn': 6, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+        "{'turn': 0, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 6, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
         "{'turn': 5, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
-        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
-        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
-        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 7, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+        "{'turn': 3, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "sleep",
+        "{'turn': 2, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+        "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 1, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 4, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 6, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 3, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "sleep",
+        "{'turn': 6, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 8, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 1, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+        "{'turn': 3, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
+        "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 2, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 9, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 3, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
         "{'turn': 0, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "bloom"
       }
     },
@@ -289,25 +861,45 @@
         "No criticism pass was allowed, so weak spots remain untested."
       ],
       "predictions": {
-        "{'turn': 4, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
-        "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
-        "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
-        "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "sleep",
-        "{'turn': 6, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+        "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
         "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
-        "{'turn': 6, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "sleep",
-        "{'turn': 9, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
         "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
-        "{'turn': 4, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
         "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
-        "{'turn': 2, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
-        "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
-        "{'turn': 5, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "sleep",
-        "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 5, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+        "{'turn': 8, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+        "{'turn': 0, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 5, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+        "{'turn': 6, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+        "{'turn': 0, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 6, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "sleep",
         "{'turn': 5, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
-        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
-        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
-        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 7, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+        "{'turn': 3, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 1, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 4, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "sleep",
+        "{'turn': 6, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "sleep",
+        "{'turn': 3, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 6, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+        "{'turn': 8, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+        "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+        "{'turn': 1, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 3, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 2, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 9, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 3, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
         "{'turn': 0, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake"
       }
     },
@@ -337,70 +929,71 @@
         "arbitrary_clauses": 0,
         "decisive_tests": [
           {
-            "turn": 0,
+            "turn": 7,
             "realm": "north",
-            "distance": "near",
-            "moon": "dark",
-            "wind": "restless"
-          },
-          {
-            "turn": 0,
-            "realm": "north",
-            "distance": "near",
+            "distance": "far",
             "moon": "bright",
-            "wind": "still"
+            "wind": "restless"
           }
         ]
       },
       "acquired_observations": [
         {
           "case": {
-            "turn": 0,
+            "turn": 7,
             "realm": "north",
-            "distance": "near",
-            "moon": "dark",
+            "distance": "far",
+            "moon": "bright",
             "wind": "restless"
           },
-          "outcome": "sleep",
-          "myth": "When Freyja hides her necklace, stands near the hearth, and the ravens quarrel, upper fjord: the gardens sleep."
-        },
-        {
-          "case": {
-            "turn": 0,
-            "realm": "north",
-            "distance": "near",
-            "moon": "bright",
-            "wind": "still"
-          },
           "outcome": "bloom",
-          "myth": "When Freyja polishes her necklace, stands near the hearth, and the ravens rest, upper fjord: the gardens bloom."
+          "myth": "When Freyja polishes her necklace, stands behind the veil, and the ravens quarrel, upper fjord: the gardens bloom."
         }
       ],
       "critiques": [
         "Criticism: interaction pair model and cycle-only both fit what is known, so ask a risky unobserved test where they disagree.",
-        "Criticism: interaction pair model and cycle-only both fit what is known, so ask a risky unobserved test where they disagree.",
         "interaction pair model currently has no close rival on observed cases."
       ],
       "predictions": {
-        "{'turn': 4, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
-        "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
-        "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "bloom",
-        "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
-        "{'turn': 6, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+        "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "bloom",
         "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
-        "{'turn': 6, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
-        "{'turn': 9, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+        "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+        "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "sleep",
         "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
-        "{'turn': 4, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
         "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
-        "{'turn': 2, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
-        "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
-        "{'turn': 5, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "bloom",
-        "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+        "{'turn': 5, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 8, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+        "{'turn': 0, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 5, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 6, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+        "{'turn': 0, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+        "{'turn': 6, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
         "{'turn': 5, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
-        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
-        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
-        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+        "{'turn': 7, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+        "{'turn': 3, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 1, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+        "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 4, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "bloom",
+        "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 6, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 3, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+        "{'turn': 2, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 6, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+        "{'turn': 8, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+        "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 1, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+        "{'turn': 3, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
+        "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+        "{'turn': 2, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+        "{'turn': 9, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+        "{'turn': 3, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
         "{'turn': 0, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake"
       }
     }
@@ -411,40 +1004,40 @@
       "prediction_accuracy": 1.0,
       "hard_to_vary": 0.833,
       "reach": 1.0,
-      "criticizability": 0.75,
+      "criticizability": 0.458,
       "error_correction": 0.0,
-      "explanation_score": 0.5956999999999999,
+      "explanation_score": 0.4935,
       "total": 1.0
     },
     {
-      "agent": "pure prediction",
-      "prediction_accuracy": 0.5,
-      "hard_to_vary": 0.82,
-      "reach": 0.4,
-      "criticizability": 0.167,
-      "error_correction": 0.0,
-      "explanation_score": 0.38645,
-      "total": 0.46499999999999997
-    },
-    {
-      "agent": "no-critique conjecture",
-      "prediction_accuracy": 0.45,
-      "hard_to_vary": 0.667,
-      "reach": 0.25,
-      "criticizability": 0.167,
-      "error_correction": 0.0,
-      "explanation_score": 0.32525000000000004,
-      "total": 0.38
-    },
-    {
       "agent": "myth-preserving storyteller",
-      "prediction_accuracy": 0.35,
+      "prediction_accuracy": 0.55,
       "hard_to_vary": 0.0,
-      "reach": 0.4,
+      "reach": 0.475,
       "criticizability": 0.167,
       "error_correction": 0.0,
       "explanation_score": 0.05845,
-      "total": 0.36749999999999994
+      "total": 0.52375
+    },
+    {
+      "agent": "pure prediction",
+      "prediction_accuracy": 0.475,
+      "hard_to_vary": 0.82,
+      "reach": 0.5,
+      "criticizability": 0.167,
+      "error_correction": 0.0,
+      "explanation_score": 0.38645,
+      "total": 0.48374999999999996
+    },
+    {
+      "agent": "no-critique conjecture",
+      "prediction_accuracy": 0.475,
+      "hard_to_vary": 0.667,
+      "reach": 0.4,
+      "criticizability": 0.167,
+      "error_correction": 0.0,
+      "explanation_score": 0.32525000000000004,
+      "total": 0.44875
     }
   ],
   "hidden_config": "seed=17, family=interaction, period=10, axial_phase=4, heat_lag=2, weights=(axial=2.37, distance=0.71, moon=-0.32, wind=0.25, interaction=0.98)"

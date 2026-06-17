@@ -13,8 +13,13 @@ from .world import HiddenWorld
 
 def run_experiment(seed: int, rounds: int, public_count: int, holdout_count: int) -> dict[str, object]:
     world = HiddenWorld.generate(seed)
-    public_observations = world.sample_public_observations(public_count, seed + 1)
-    holdout_cases, transfer_cases = world.split_holdouts(holdout_count, seed + 2)
+    public_cases, holdout_cases, transfer_cases, experiment_cases = world.partition_cases(
+        public_count=public_count,
+        holdout_count=holdout_count,
+        transfer_count=holdout_count,
+        seed=seed + 1,
+    )
+    public_observations = [world.observe(case) for case in public_cases]
     transfer_world = world.transfer_world()
 
     holdout_truth = {case: world.outcome(case) for case in holdout_cases}
@@ -23,7 +28,7 @@ def run_experiment(seed: int, rounds: int, public_count: int, holdout_count: int
     runs: list[AgentRun] = []
     scores: list[ScoreCard] = []
     for agent in all_agents():
-        run = agent.run(world, public_observations, holdout_cases, rounds)
+        run = agent.run(world, public_observations, holdout_cases, experiment_cases, rounds)
         transfer_predictions = agent.predictions_for(
             run.final,
             tuple(public_observations) + run.acquired_observations,
@@ -47,6 +52,7 @@ def run_experiment(seed: int, rounds: int, public_count: int, holdout_count: int
         "public_observations": public_observations,
         "holdout_truth": holdout_truth,
         "transfer_truth": transfer_truth,
+        "experiment_cases": experiment_cases,
         "runs": runs,
         "scores": sorted(scores, key=lambda score: score.total, reverse=True),
         "hidden_config": world.reveal_config(),
@@ -156,7 +162,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--seed", type=int, default=17)
     parser.add_argument("--rounds", type=int, default=4)
     parser.add_argument("--public-count", type=int, default=10)
-    parser.add_argument("--holdout-count", type=int, default=20)
+    parser.add_argument("--holdout-count", type=int, default=40)
     parser.add_argument("--output-dir", type=Path, default=Path("reports"))
     parser.add_argument("--opaque-public", action="store_true", help="Use non-semantic case labels in the report.")
     args = parser.parse_args(argv)

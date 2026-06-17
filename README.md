@@ -27,6 +27,8 @@ The benchmark avoids the obvious cheat of using known scientific facts:
 
 - Hidden worlds are generated from runtime seeds.
 - The causal rule is withheld until after scoring.
+- Public, experimentable, holdout, and transfer cases are explicitly disjoint.
+- Critique agents can query the oracle only from the experimentable pool.
 - Public observations are written as Freyja-like stories.
 - Reports can use opaque variable labels instead of semantic names.
 - Agents are compared against simple baselines.
@@ -53,10 +55,10 @@ Report: reports/report_seed_17.md
 Transcript: reports/transcript_seed_17.json
 
 Scores:
-- Deutsch critique loop: truth=1.000, prediction=1.000, reach=1.000, explanation=0.596
-- pure prediction: truth=0.465, prediction=0.500, reach=0.400, explanation=0.386
-- no-critique conjecture: truth=0.380, prediction=0.450, reach=0.250, explanation=0.325
-- myth-preserving storyteller: truth=0.367, prediction=0.350, reach=0.400, explanation=0.058
+- Deutsch critique loop: truth=1.000, prediction=1.000, reach=1.000, explanation=0.493
+- myth-preserving storyteller: truth=0.524, prediction=0.550, reach=0.475, explanation=0.058
+- pure prediction: truth=0.484, prediction=0.475, reach=0.500, explanation=0.386
+- no-critique conjecture: truth=0.449, prediction=0.475, reach=0.400, explanation=0.325
 ```
 
 Exact results vary by seed because each world is generated at runtime.
@@ -79,6 +81,8 @@ The benchmark report separates:
 - `avg truth`: the headline score, based on hidden prediction and transfer reach.
 - `avg explanation`: diagnostic score for hard-to-vary structure, criticizability, and error correction.
 - `failure cases`: seeds where the Deutsch critique loop did not win.
+
+The default scored set is intentionally larger than the first prototype: 40 holdout cases and 40 transfer cases per seed. Results are still noisy, so failure cases and variance should be read as part of the evidence.
 
 ## Run A Real Model
 
@@ -105,6 +109,6 @@ The harness compares four agents:
 
 ## Current Limitations
 
-The current agents are still hand-built heuristics, not real LLM agents. The hypothesis space is wider than the first version, but it is still supplied by the benchmark designer. This project currently tests the structure of a Deutsch-style discovery loop more than it proves autonomous AI discovery.
+The current agents are still hand-built heuristics, not real LLM agents. The hypothesis space is wider than the first version, but it is still supplied by the benchmark designer. The transfer world is still a related toy world, not a radically new domain. This project currently tests the structure of a Deutsch-style discovery loop more than it proves autonomous AI discovery.
 
 The real-model runner is the first bridge to LLM testing, but it is still a single-pass predictor. The next serious step is a multi-round LLM loop where the model proposes risky tests, receives oracle results, and revises its explanation without seeing the hidden rule.

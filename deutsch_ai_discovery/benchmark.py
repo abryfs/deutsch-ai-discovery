@@ -104,7 +104,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--runs", type=int, default=50)
     parser.add_argument("--rounds", type=int, default=4)
     parser.add_argument("--public-count", type=int, default=10)
-    parser.add_argument("--holdout-count", type=int, default=20)
+    parser.add_argument("--holdout-count", type=int, default=40)
     parser.add_argument("--output-dir", type=Path, default=Path("reports"))
     args = parser.parse_args(argv)
 

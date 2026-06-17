@@ -90,6 +90,30 @@ class HiddenWorld:
         selected = _balanced_sample(cases, count)
         return [self.observe(case) for case in selected]
 
+    def partition_cases(
+        self,
+        public_count: int,
+        holdout_count: int,
+        transfer_count: int,
+        seed: int,
+    ) -> tuple[list[WorldCase], list[WorldCase], list[WorldCase], list[WorldCase]]:
+        """Create disjoint public, holdout, transfer, and experimentable pools."""
+
+        rng = random.Random(seed)
+        cases = self.all_cases()
+        rng.shuffle(cases)
+        required = public_count + holdout_count + transfer_count
+        if required > len(cases):
+            raise ValueError(
+                "Requested public, holdout, and transfer cases exceed the hidden world size."
+            )
+        public_cases = _balanced_sample(cases, public_count)
+        remaining = [case for case in cases if case not in public_cases]
+        holdout_cases = remaining[:holdout_count]
+        transfer_cases = remaining[holdout_count : holdout_count + transfer_count]
+        experiment_cases = remaining[holdout_count + transfer_count :]
+        return public_cases, holdout_cases, transfer_cases, experiment_cases
+
     def split_holdouts(self, count: int, seed: int) -> tuple[list[WorldCase], list[WorldCase]]:
         rng = random.Random(seed)
         cases = self.all_cases()

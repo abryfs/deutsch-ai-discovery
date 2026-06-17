@@ -71,6 +71,7 @@ class DiscoveryAgent:
         world: HiddenWorld,
         public_observations: Sequence[Observation],
         holdout_cases: Sequence[WorldCase],
+        experiment_cases: Sequence[WorldCase],
         rounds: int,
     ) -> AgentRun:
         raise NotImplementedError
@@ -93,6 +94,7 @@ class MythPreservingStoryteller(DiscoveryAgent):
         world: HiddenWorld,
         public_observations: Sequence[Observation],
         holdout_cases: Sequence[WorldCase],
+        experiment_cases: Sequence[WorldCase],
         rounds: int,
     ) -> AgentRun:
         majority = Counter(o.outcome for o in public_observations).most_common(1)[0][0]
@@ -126,6 +128,7 @@ class PurePredictionAgent(DiscoveryAgent):
         world: HiddenWorld,
         public_observations: Sequence[Observation],
         holdout_cases: Sequence[WorldCase],
+        experiment_cases: Sequence[WorldCase],
         rounds: int,
     ) -> AgentRun:
         hypothesis = _choose_best([_hypothesis_from_terms("surface lookup", ("realm", "distance", "moon"))], public_observations)
@@ -154,6 +157,7 @@ class NoCritiqueAgent(DiscoveryAgent):
         world: HiddenWorld,
         public_observations: Sequence[Observation],
         holdout_cases: Sequence[WorldCase],
+        experiment_cases: Sequence[WorldCase],
         rounds: int,
     ) -> AgentRun:
         hypothesis = _choose_best(_simple_hypotheses(), public_observations)
@@ -182,6 +186,7 @@ class DeutschCritiqueAgent(DiscoveryAgent):
         world: HiddenWorld,
         public_observations: Sequence[Observation],
         holdout_cases: Sequence[WorldCase],
+        experiment_cases: Sequence[WorldCase],
         rounds: int,
     ) -> AgentRun:
         observations = list(public_observations)
@@ -193,12 +198,12 @@ class DeutschCritiqueAgent(DiscoveryAgent):
         for _ in range(rounds):
             ranked = _rank_hypotheses(candidates, observations)
             best = ranked[0]
-            challenger = _first_disagreeing_hypothesis(best, ranked[1:], observations, world.all_cases())
+            challenger = _first_disagreeing_hypothesis(best, ranked[1:], observations, experiment_cases)
             if challenger is None:
                 critiques.append(f"{best.name} currently has no close rival on observed cases.")
                 break
 
-            test_case = _find_disagreement_case(best, challenger, observations, world.all_cases())
+            test_case = _find_disagreement_case(best, challenger, observations, experiment_cases)
             if test_case is None:
                 break
 

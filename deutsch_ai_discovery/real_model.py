@@ -20,8 +20,13 @@ def run_real_model_experiment(
     opaque_public: bool,
 ) -> dict[str, object]:
     world = HiddenWorld.generate(seed)
-    public_observations = world.sample_public_observations(public_count, seed + 1)
-    holdout_cases, transfer_cases = world.split_holdouts(holdout_count, seed + 2)
+    public_cases, holdout_cases, transfer_cases, _experiment_cases = world.partition_cases(
+        public_count=public_count,
+        holdout_count=holdout_count,
+        transfer_count=holdout_count,
+        seed=seed + 1,
+    )
+    public_observations = [world.observe(case) for case in public_cases]
     transfer_world = world.transfer_world()
 
     holdout_truth = {case: world.outcome(case) for case in holdout_cases}
@@ -123,7 +128,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Run a real OpenRouter-compatible model on one hidden world.")
     parser.add_argument("--seed", type=int, default=17)
     parser.add_argument("--public-count", type=int, default=10)
-    parser.add_argument("--holdout-count", type=int, default=20)
+    parser.add_argument("--holdout-count", type=int, default=40)
     parser.add_argument("--output-dir", type=Path, default=Path("reports"))
     parser.add_argument("--opaque-public", action="store_true")
     args = parser.parse_args(argv)

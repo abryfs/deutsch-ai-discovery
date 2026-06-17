@@ -22,10 +22,10 @@ step=6, a=r0, b=d1, c=m0, e=w0 | sleep | When Freyja hides her necklace, stands 
 
 agent | truth score | prediction | transfer reach | explanation score | hard-to-vary | criticizability | error-correction
 --- | ---: | ---: | ---: | ---: | ---: | ---: | ---:
-Deutsch critique loop | 1.000 | 1.000 | 1.000 | 0.596 | 0.833 | 0.750 | 0.000
-pure prediction | 0.465 | 0.500 | 0.400 | 0.386 | 0.820 | 0.167 | 0.000
-no-critique conjecture | 0.380 | 0.450 | 0.250 | 0.325 | 0.667 | 0.167 | 0.000
-myth-preserving storyteller | 0.367 | 0.350 | 0.400 | 0.058 | 0.000 | 0.167 | 0.000
+Deutsch critique loop | 1.000 | 1.000 | 1.000 | 0.493 | 0.833 | 0.458 | 0.000
+myth-preserving storyteller | 0.524 | 0.550 | 0.475 | 0.058 | 0.000 | 0.167 | 0.000
+pure prediction | 0.484 | 0.475 | 0.500 | 0.386 | 0.820 | 0.167 | 0.000
+no-critique conjecture | 0.449 | 0.475 | 0.400 | 0.325 | 0.667 | 0.167 | 0.000
 
 ## Runs
 
@@ -97,12 +97,10 @@ Falsifier: A decisive refutation would be an unobserved case where a close rival
 
 Critiques:
 - Criticism: interaction pair model and cycle-only both fit what is known, so ask a risky unobserved test where they disagree.
-- Criticism: interaction pair model and cycle-only both fit what is known, so ask a risky unobserved test where they disagree.
 - interaction pair model currently has no close rival on observed cases.
 
 Acquired observations:
-- step=0, a=r0, b=d0, c=m0, e=w1 -> sleep; When Freyja hides her necklace, stands near the hearth, and the ravens quarrel, upper fjord: the gardens sleep.
-- step=0, a=r0, b=d0, c=m1, e=w0 -> bloom; When Freyja polishes her necklace, stands near the hearth, and the ravens rest, upper fjord: the gardens bloom.
+- step=7, a=r0, b=d1, c=m1, e=w1 -> bloom; When Freyja polishes her necklace, stands behind the veil, and the ravens quarrel, upper fjord: the gardens bloom.
 
 ## Holdout Predictions
 
@@ -110,53 +108,53 @@ Acquired observations:
 
 case | prediction | truth
 --- | --- | ---
-step=4, a=r1, b=d0, c=m0, e=w0 | wake | bloom
-step=7, a=r0, b=d0, c=m0, e=w1 | wake | sleep
-step=2, a=r0, b=d0, c=m1, e=w0 | wake | bloom
-step=7, a=r1, b=d1, c=m0, e=w1 | wake | bloom
-step=6, a=r0, b=d0, c=m0, e=w1 | wake | sleep
+step=3, a=r0, b=d1, c=m1, e=w0 | wake | wake
+step=2, a=r1, b=d1, c=m1, e=w1 | wake | wake
+step=0, a=r0, b=d0, c=m1, e=w0 | wake | bloom
 step=2, a=r0, b=d0, c=m1, e=w1 | wake | wake
-step=6, a=r0, b=d1, c=m1, e=w1 | wake | bloom
-step=9, a=r0, b=d1, c=m1, e=w1 | wake | bloom
+step=4, a=r1, b=d1, c=m1, e=w1 | wake | wake
+step=0, a=r0, b=d1, c=m0, e=w1 | wake | wake
+step=0, a=r0, b=d1, c=m1, e=w1 | wake | bloom
+step=0, a=r0, b=d1, c=m0, e=w0 | wake | sleep
 
 ### pure prediction
 
 case | prediction | truth
 --- | --- | ---
-step=4, a=r1, b=d0, c=m0, e=w0 | bloom | bloom
-step=7, a=r0, b=d0, c=m0, e=w1 | wake | sleep
-step=2, a=r0, b=d0, c=m1, e=w0 | wake | bloom
-step=7, a=r1, b=d1, c=m0, e=w1 | wake | bloom
-step=6, a=r0, b=d0, c=m0, e=w1 | wake | sleep
+step=3, a=r0, b=d1, c=m1, e=w0 | wake | wake
+step=2, a=r1, b=d1, c=m1, e=w1 | sleep | wake
+step=0, a=r0, b=d0, c=m1, e=w0 | wake | bloom
 step=2, a=r0, b=d0, c=m1, e=w1 | wake | wake
-step=6, a=r0, b=d1, c=m1, e=w1 | wake | bloom
-step=9, a=r0, b=d1, c=m1, e=w1 | wake | bloom
+step=4, a=r1, b=d1, c=m1, e=w1 | sleep | wake
+step=0, a=r0, b=d1, c=m0, e=w1 | wake | wake
+step=0, a=r0, b=d1, c=m1, e=w1 | wake | bloom
+step=0, a=r0, b=d1, c=m0, e=w0 | wake | sleep
 
 ### no-critique conjecture
 
 case | prediction | truth
 --- | --- | ---
-step=4, a=r1, b=d0, c=m0, e=w0 | wake | bloom
-step=7, a=r0, b=d0, c=m0, e=w1 | sleep | sleep
-step=2, a=r0, b=d0, c=m1, e=w0 | wake | bloom
-step=7, a=r1, b=d1, c=m0, e=w1 | sleep | bloom
-step=6, a=r0, b=d0, c=m0, e=w1 | sleep | sleep
+step=3, a=r0, b=d1, c=m1, e=w0 | wake | wake
+step=2, a=r1, b=d1, c=m1, e=w1 | wake | wake
+step=0, a=r0, b=d0, c=m1, e=w0 | wake | bloom
 step=2, a=r0, b=d0, c=m1, e=w1 | wake | wake
-step=6, a=r0, b=d1, c=m1, e=w1 | sleep | bloom
-step=9, a=r0, b=d1, c=m1, e=w1 | wake | bloom
+step=4, a=r1, b=d1, c=m1, e=w1 | wake | wake
+step=0, a=r0, b=d1, c=m0, e=w1 | wake | wake
+step=0, a=r0, b=d1, c=m1, e=w1 | wake | bloom
+step=0, a=r0, b=d1, c=m0, e=w0 | wake | sleep
 
 ### Deutsch critique loop
 
 case | prediction | truth
 --- | --- | ---
-step=4, a=r1, b=d0, c=m0, e=w0 | bloom | bloom
-step=7, a=r0, b=d0, c=m0, e=w1 | sleep | sleep
-step=2, a=r0, b=d0, c=m1, e=w0 | bloom | bloom
-step=7, a=r1, b=d1, c=m0, e=w1 | bloom | bloom
-step=6, a=r0, b=d0, c=m0, e=w1 | sleep | sleep
+step=3, a=r0, b=d1, c=m1, e=w0 | wake | wake
+step=2, a=r1, b=d1, c=m1, e=w1 | wake | wake
+step=0, a=r0, b=d0, c=m1, e=w0 | bloom | bloom
 step=2, a=r0, b=d0, c=m1, e=w1 | wake | wake
-step=6, a=r0, b=d1, c=m1, e=w1 | bloom | bloom
-step=9, a=r0, b=d1, c=m1, e=w1 | bloom | bloom
+step=4, a=r1, b=d1, c=m1, e=w1 | wake | wake
+step=0, a=r0, b=d1, c=m0, e=w1 | wake | wake
+step=0, a=r0, b=d1, c=m1, e=w1 | bloom | bloom
+step=0, a=r0, b=d1, c=m0, e=w0 | sleep | sleep
 
 ## Hidden World Revealed
 
