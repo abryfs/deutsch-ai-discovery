@@ -1,0 +1,36 @@
+README.md
+  s_fe2fcdae39751b::t_38c43e40782079 127-131,134-136,139
+  s_fe2fcdae39751b::t_ee0c4acff7647a 132-133,138
+  s_fe2fcdae39751b::t_b701f398ea4069 137
+deutsch_ai_discovery/real_loop.py
+  s_fe2fcdae39751b::t_334d5421ee5ae7 101,178-179
+  s_fe2fcdae39751b::t_565d09c960d00f 212-288,290-293,306-307
+  s_fe2fcdae39751b::t_9ca475eb15384e 85-86,171-173,176-177,289,294-305
+  s_fe2fcdae39751b::t_b68c0da56a7885 329-335
+  s_fe2fcdae39751b::t_8cbfecfc6de2c3 38-39,41-53,87-99,102-103,116-120,123-127,154,156-157,159-170,174-175,180-181
+tests/test_real_loop.py
+  s_fe2fcdae39751b::t_5805427ecfb23b 7,52,54,68,74-111
+  s_fe2fcdae39751b::t_323baf10074e7b 66-67,69,73
+docs/index.html
+  s_fe2fcdae39751b::t_1d17315509c2a8 57,135,140,166-167,184-185
+deutsch_ai_discovery/gemini.py
+  s_fe2fcdae39751b::t_e571db8a701338 5,60,71-90
+deutsch_ai_discovery/openrouter.py
+  s_fe2fcdae39751b::t_f9f36165425f29 5,56,66-85
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.8",
+  "base_commit_sha": "177ff08ab665b65edcdc58c15895e6efefa70fbf",
+  "prompts": {},
+  "sessions": {
+    "s_fe2fcdae39751b": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "3a5e2761-fe1c-4ef0-991f-f3b8d0168bbc",
+        "model": "gpt-5.5"
+      },
+      "human_author": "abryfs <69842068+abryfs@users.noreply.github.com>"
+    }
+  }
+}
