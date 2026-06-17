@@ -90,10 +90,13 @@ class ScoreCard:
 
 
 def observations_as_table(observations: Iterable[Observation], opaque: bool = False) -> str:
+    if opaque:
+        lines = ["case | outcome", "--- | ---"]
+        for observation in observations:
+            lines.append(f"{observation.case.opaque_key()} | {observation.outcome}")
+        return "\n".join(lines)
+
     lines = ["case | outcome | myth", "--- | --- | ---"]
     for observation in observations:
-        case_key = observation.case.opaque_key() if opaque else observation.case.public_key()
-        lines.append(
-            f"{case_key} | {observation.outcome} | {observation.myth}"
-        )
+        lines.append(f"{observation.case.public_key()} | {observation.outcome} | {observation.myth}")
     return "\n".join(lines)

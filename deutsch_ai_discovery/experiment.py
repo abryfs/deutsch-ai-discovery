@@ -81,6 +81,13 @@ def render_markdown_report(result: dict[str, object], opaque_public: bool = Fals
         f"Seed: `{result['seed']}`",
         f"Rounds: `{result['rounds']}`",
         "",
+        "## Protocol Notes",
+        "",
+        "- Primary metric: final hidden truth score on holdout plus structurally shifted transfer cases.",
+        "- Diagnostic metrics: explanation proxy scores, critiques, and acquired observations.",
+        "- Opaque mode removes mythic story text from model-facing observations.",
+        "- Matched controls share the critique loop's hypothesis library and label budget.",
+        "",
         "## Public Observations",
         "",
         observations_as_table(public_observations, opaque=opaque_public),
@@ -126,10 +133,7 @@ def render_markdown_report(result: dict[str, object], opaque_public: bool = Fals
         lines.append("")
         lines.append("Acquired observations:")
         if run.acquired_observations:
-            lines.extend(
-                f"- {_case_key(obs.case, opaque_public)} -> {obs.outcome}; {obs.myth}"
-                for obs in run.acquired_observations
-            )
+            lines.extend(f"- {_observation_line(obs, opaque_public)}" for obs in run.acquired_observations)
         else:
             lines.append("- None")
         lines.append("")
@@ -209,6 +213,13 @@ def _case_key(case: WorldCase, opaque_public: bool) -> str:
     return case.opaque_key() if opaque_public else case.public_key()
 
 
+def _observation_line(observation: Observation, opaque_public: bool) -> str:
+    base = f"{_case_key(observation.case, opaque_public)} -> {observation.outcome}"
+    if opaque_public:
+        return base
+    return f"{base}; {observation.myth}"
+
+
 def _public_text(text: object, opaque_public: bool) -> str:
     value = str(text)
     if not opaque_public:
@@ -229,6 +240,11 @@ def _public_text(text: object, opaque_public: bool) -> str:
         "axis": "cycle-realm",
         "tilt": "cycle-bias",
         "orbital": "cycle-factor-b",
+        "Freyja": "story_agent",
+        "fjord": "region",
+        "necklace": "token",
+        "ravens": "omens",
+        "gardens": "system",
     }
     for before, after in replacements.items():
         value = value.replace(before, after)

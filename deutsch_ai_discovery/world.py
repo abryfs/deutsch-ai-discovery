@@ -34,7 +34,8 @@ class HiddenWorldConfig:
 class HiddenWorld:
     """A sealed toy reality generated after the experiment starts.
 
-    The public transcript exposes cases, outcomes, and mythic surface stories.
+    The non-opaque transcript exposes cases, outcomes, and mythic surface stories.
+    Opaque model-facing runs expose only neutral symbols and outcomes.
     The causal coefficients stay hidden until the final report.
     """
 
@@ -122,17 +123,19 @@ class HiddenWorld:
 
     def transfer_world(self) -> "HiddenWorld":
         cfg = self.config
+        families = ("seasonal", "threshold", "interaction")
+        shifted_family = families[(families.index(cfg.family) + 1) % len(families)]
         return HiddenWorld(
             HiddenWorldConfig(
                 seed=cfg.seed + 10_001,
-                family=cfg.family,
+                family=shifted_family,
                 period=cfg.period,
-                axial_phase=(cfg.axial_phase + 1) % cfg.period,
-                axial_weight=cfg.axial_weight,
-                distance_weight=cfg.distance_weight * 0.9,
-                moon_weight=cfg.moon_weight,
-                wind_weight=cfg.wind_weight,
-                interaction_weight=cfg.interaction_weight,
+                axial_phase=(cfg.axial_phase + 2) % cfg.period,
+                axial_weight=cfg.axial_weight * 0.9,
+                distance_weight=-cfg.distance_weight,
+                moon_weight=cfg.moon_weight * 1.1,
+                wind_weight=-cfg.wind_weight,
+                interaction_weight=cfg.interaction_weight * 1.15,
                 heat_lag=cfg.heat_lag,
                 bloom_threshold=cfg.bloom_threshold,
                 sleep_threshold=cfg.sleep_threshold,

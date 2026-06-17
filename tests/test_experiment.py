@@ -85,6 +85,16 @@ class ExperimentTests(unittest.TestCase):
         self.assertIn("step=", report)
         self.assertNotIn("realm=", report)
         self.assertNotIn("distance=", report)
+        self.assertNotIn("Freyja", report)
+        self.assertNotIn("fjord", report)
+        self.assertNotIn("necklace", report)
+        self.assertNotIn("ravens", report)
+
+    def test_transfer_world_changes_family(self) -> None:
+        world = HiddenWorld.generate(17)
+        transfer = world.transfer_world()
+
+        self.assertNotEqual(world.config.family, transfer.config.family)
 
     def test_benchmark_report_shows_aggregate_and_failures(self) -> None:
         result = run_benchmark(
@@ -100,6 +110,8 @@ class ExperimentTests(unittest.TestCase):
         self.assertIn("## Aggregate Scores", report)
         self.assertIn("## Failure Cases", report)
         self.assertIn("Deutsch critique loop", report)
+        self.assertIn("matched passive extra observations", report)
+        self.assertIn("matched random tests", report)
 
 
 if __name__ == "__main__":

@@ -122,22 +122,22 @@
     <header>
       <div class="hero">
         <div>
-          <span class="badge">Sealed oracle experiment</span>
-          <h1>Can AI improve explanations?</h1>
+          <span class="badge">Sealed oracle benchmark</span>
+          <h1>Can critique improve discovery?</h1>
           <p>
-            This project turns David Deutsch's idea of good explanations into a small benchmark:
-            conjecture, criticize, test, revise, then score on hidden cases.
+            This project turns a Deutsch-inspired process into a small benchmark:
+            rival conjectures, discriminating tests, oracle feedback, then hidden scoring.
           </p>
           <p><a href="https://github.com/abryfs/deutsch-ai-discovery">View the GitHub repo</a></p>
         </div>
         <div class="card">
-          <h2>First real model run</h2>
-          <p>Gemini 2.5 Flash, seed 17. The next metric is whether the score keeps improving across rounds.</p>
+          <h2>Current status</h2>
+          <p>The prototype was pivoted after review: opaque inputs, matched controls, harder transfer, and final-only headline scoring.</p>
           <div class="metric-grid">
-            <div class="metric"><strong>0.750</strong><span>truth score</span></div>
-            <div class="metric"><strong>0.750</strong><span>holdout accuracy</span></div>
-            <div class="metric"><strong>0.750</strong><span>transfer reach</span></div>
-            <div class="metric"><strong>curve</strong><span>next evidence</span></div>
+            <div class="metric"><strong>final</strong><span>headline score</span></div>
+            <div class="metric"><strong>opaque</strong><span>model inputs</span></div>
+            <div class="metric"><strong>matched</strong><span>controls</span></div>
+            <div class="metric"><strong>shifted</strong><span>transfer</span></div>
           </div>
         </div>
       </div>
@@ -157,14 +157,12 @@
       </section>
 
       <section class="card">
-        <h2>The loop we need next</h2>
+        <h2>The cleaner test</h2>
         <img src="assets/real-llm-loop.svg" alt="Multi-round real model oracle loop" />
         <p>
-          The important upgrade is letting the real model ask for risky tests from the
-          experimentable pool before it predicts hidden holdout and transfer cases.
-          On the first small seed, the loop successfully requested three oracle tests,
-          but did not outperform the one-shot run. The next report tracks the score after
-          every round, so we can ask whether error correction keeps producing progress.
+          The useful question is not whether an AI has produced good explanations in the full
+          Deutschian sense. It is narrower: does explicit rival-conjecture criticism select
+          better tests and improve final hidden-world prediction compared with matched baselines?
         </p>
       </section>
 
@@ -178,11 +176,11 @@ python3 -m deutsch_ai_discovery.real_loop --provider gemini --seed 17 --rounds 3
     <script>
       const stages = [
         ["1", "Hidden world", "A synthetic world is generated after the run starts. The hidden causal rule is not shown to the model."],
-        ["2", "Public myths", "The model receives a small table of observations expressed as Freyja-like stories and opaque case labels."],
-        ["3", "Risky tests", "In the multi-round loop, the model picks exact experimentable cases where rival explanations should disagree."],
+        ["2", "Opaque observations", "In sealed mode, the model receives only neutral case symbols and outcomes. Mythic story text is withheld."],
+        ["3", "Matched controls", "No-critique, passive-label, and random-test baselines share the same hypothesis library and label budget."],
         ["4", "Oracle feedback", "The oracle reveals only the outcome for the requested experiment case, never the hidden rule."],
-        ["5", "Trajectory", "The model is rescored after each oracle result, producing an improvement curve rather than a single final number."],
-        ["6", "Reach score", "Only hidden holdout and transfer cases count toward the truth score; they are never queryable."]
+        ["5", "Trajectory", "The model is rescored after each oracle result, but the curve is diagnostic only."],
+        ["6", "Final score", "Only the final hidden holdout and shifted-transfer predictions count as the headline result."]
       ];
       const tabs = document.getElementById("tabs");
       const label = document.getElementById("stage-label");

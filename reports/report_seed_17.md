@@ -3,41 +3,50 @@
 Seed: `17`
 Rounds: `4`
 
+## Protocol Notes
+
+- Primary metric: final hidden truth score on holdout plus structurally shifted transfer cases.
+- Diagnostic metrics: explanation proxy scores, critiques, and acquired observations.
+- Opaque mode removes mythic story text from model-facing observations.
+- Matched controls share the critique loop's hypothesis library and label budget.
+
 ## Public Observations
 
-case | outcome | myth
---- | --- | ---
-step=0, a=r0, b=d0, c=m1, e=w1 | wake | When Freyja polishes her necklace, stands near the hearth, and the ravens quarrel, upper fjord: the gardens stir.
-step=3, a=r1, b=d0, c=m1, e=w1 | sleep | When Freyja polishes her necklace, stands near the hearth, and the ravens quarrel, lower fjord: the gardens sleep.
-step=2, a=r0, b=d1, c=m0, e=w1 | wake | When Freyja hides her necklace, stands behind the veil, and the ravens quarrel, upper fjord: the gardens stir.
-step=2, a=r1, b=d0, c=m0, e=w0 | bloom | When Freyja hides her necklace, stands near the hearth, and the ravens rest, lower fjord: the gardens bloom.
-step=6, a=r1, b=d1, c=m1, e=w0 | sleep | When Freyja polishes her necklace, stands behind the veil, and the ravens rest, lower fjord: the gardens sleep.
-step=3, a=r1, b=d0, c=m0, e=w1 | wake | When Freyja hides her necklace, stands near the hearth, and the ravens quarrel, lower fjord: the gardens stir.
-step=4, a=r1, b=d0, c=m1, e=w0 | wake | When Freyja polishes her necklace, stands near the hearth, and the ravens rest, lower fjord: the gardens stir.
-step=9, a=r0, b=d0, c=m0, e=w0 | wake | When Freyja hides her necklace, stands near the hearth, and the ravens rest, upper fjord: the gardens stir.
-step=5, a=r1, b=d1, c=m1, e=w0 | sleep | When Freyja polishes her necklace, stands behind the veil, and the ravens rest, lower fjord: the gardens sleep.
-step=6, a=r0, b=d1, c=m0, e=w0 | sleep | When Freyja hides her necklace, stands behind the veil, and the ravens rest, upper fjord: the gardens sleep.
+case | outcome
+--- | ---
+step=0, a=r0, b=d0, c=m1, e=w1 | wake
+step=3, a=r1, b=d0, c=m1, e=w1 | sleep
+step=2, a=r0, b=d1, c=m0, e=w1 | wake
+step=2, a=r1, b=d0, c=m0, e=w0 | bloom
+step=6, a=r1, b=d1, c=m1, e=w0 | sleep
+step=3, a=r1, b=d0, c=m0, e=w1 | wake
+step=4, a=r1, b=d0, c=m1, e=w0 | wake
+step=9, a=r0, b=d0, c=m0, e=w0 | wake
+step=5, a=r1, b=d1, c=m1, e=w0 | sleep
+step=6, a=r0, b=d1, c=m0, e=w0 | sleep
 
 ## Scoreboard
 
 agent | truth score | prediction | transfer reach | explanation score | hard-to-vary | criticizability | error-correction
 --- | ---: | ---: | ---: | ---: | ---: | ---: | ---:
-Deutsch critique loop | 1.000 | 1.000 | 1.000 | 0.493 | 0.833 | 0.458 | 0.000
-myth-preserving storyteller | 0.524 | 0.550 | 0.475 | 0.058 | 0.000 | 0.167 | 0.000
-pure prediction | 0.484 | 0.475 | 0.500 | 0.386 | 0.820 | 0.167 | 0.000
-no-critique conjecture | 0.449 | 0.475 | 0.400 | 0.325 | 0.667 | 0.167 | 0.000
+matched no-critique conjecture | 0.755 | 1.000 | 0.300 | 0.392 | 0.833 | 0.167 | 0.000
+matched passive extra observations | 0.755 | 1.000 | 0.300 | 0.392 | 0.833 | 0.167 | 0.000
+matched random tests | 0.755 | 1.000 | 0.300 | 0.392 | 0.833 | 0.167 | 0.000
+Deutsch critique loop | 0.755 | 1.000 | 0.300 | 0.493 | 0.833 | 0.458 | 0.000
+myth-preserving storyteller | 0.498 | 0.550 | 0.400 | 0.058 | 0.000 | 0.167 | 0.000
+pure prediction | 0.475 | 0.475 | 0.475 | 0.386 | 0.820 | 0.167 | 0.000
 
 ## Runs
 
 ### myth-preserving storyteller
 
-Initial explanation: **Freyja's moods**
+Initial explanation: **story_agent's moods**
 
-The factor_a changes because Freyja alternates between hiding and revealing her favor. New outcomes can be absorbed as new moods.
+The factor_a changes because story_agent alternates between hiding and revealing her favor. New outcomes can be absorbed as new moods.
 
-Final explanation: **Freyja's moods**
+Final explanation: **story_agent's moods**
 
-The factor_a changes because Freyja alternates between hiding and revealing her favor. New outcomes can be absorbed as new moods.
+The factor_a changes because story_agent alternates between hiding and revealing her favor. New outcomes can be absorbed as new moods.
 
 Falsifier: No single observation would decisively refute a story with new moods.
 
@@ -65,15 +74,15 @@ Critiques:
 Acquired observations:
 - None
 
-### no-critique conjecture
+### matched no-critique conjecture
 
-Initial explanation: **cycle-only**
+Initial explanation: **interaction pair model**
 
-The first plausible causal conjecture is kept without asking for risky tests. The current explanation uses cycle. It is better when removing or changing one term damages predictions.
+The first plausible causal conjecture is kept without asking for risky tests. The current explanation uses factor_a_factor_c, factor_b_factor_e. It is better when removing or changing one term damages predictions.
 
-Final explanation: **cycle-only**
+Final explanation: **interaction pair model**
 
-The first plausible causal conjecture is kept without asking for risky tests. The current explanation uses cycle. It is better when removing or changing one term damages predictions.
+The first plausible causal conjecture is kept without asking for risky tests. The current explanation uses factor_a_factor_c, factor_b_factor_e. It is better when removing or changing one term damages predictions.
 
 Falsifier: A decisive refutation would be an unobserved case where a close rival predicts a different outcome and the current explanation loses.
 
@@ -82,6 +91,48 @@ Critiques:
 
 Acquired observations:
 - None
+
+### matched passive extra observations
+
+Initial explanation: **interaction pair model**
+
+Initial conjecture before extra observations. The current explanation uses factor_a_factor_c, factor_b_factor_e. It is better when removing or changing one term damages predictions.
+
+Final explanation: **interaction pair model**
+
+Revised after receiving extra observations selected without rival-critique logic. The current explanation uses factor_a_factor_c, factor_b_factor_e. It is better when removing or changing one term damages predictions.
+
+Falsifier: A decisive refutation would be an unobserved case where a close rival predicts a different outcome and the current explanation loses.
+
+Critiques:
+- Extra labels were allowed, but no discriminating criticism selected them.
+
+Acquired observations:
+- step=7, a=r0, b=d1, c=m1, e=w1 -> bloom
+- step=6, a=r1, b=d1, c=m0, e=w0 -> wake
+- step=4, a=r0, b=d0, c=m0, e=w1 -> sleep
+- step=3, a=r0, b=d1, c=m0, e=w0 -> sleep
+
+### matched random tests
+
+Initial explanation: **interaction pair model**
+
+Initial conjecture before random oracle tests. The current explanation uses factor_a_factor_c, factor_b_factor_e. It is better when removing or changing one term damages predictions.
+
+Final explanation: **interaction pair model**
+
+Revised after the same label budget was spent on random experiment cases. The current explanation uses factor_a_factor_c, factor_b_factor_e. It is better when removing or changing one term damages predictions.
+
+Falsifier: A decisive refutation would be an unobserved case where a close rival predicts a different outcome and the current explanation loses.
+
+Critiques:
+- Random tests control for the value of extra labels without active criticism.
+
+Acquired observations:
+- step=3, a=r0, b=d0, c=m1, e=w1 -> wake
+- step=2, a=r0, b=d1, c=m1, e=w0 -> wake
+- step=1, a=r1, b=d1, c=m1, e=w1 -> wake
+- step=7, a=r1, b=d1, c=m1, e=w0 -> sleep
 
 ### Deutsch critique loop
 
@@ -100,7 +151,7 @@ Critiques:
 - interaction pair model currently has no close rival on observed cases.
 
 Acquired observations:
-- step=7, a=r0, b=d1, c=m1, e=w1 -> bloom; When Freyja polishes her necklace, stands behind the veil, and the ravens quarrel, upper fjord: the gardens bloom.
+- step=7, a=r0, b=d1, c=m1, e=w1 -> bloom
 
 ## Holdout Predictions
 
@@ -130,18 +181,44 @@ step=0, a=r0, b=d1, c=m0, e=w1 | wake | wake
 step=0, a=r0, b=d1, c=m1, e=w1 | wake | bloom
 step=0, a=r0, b=d1, c=m0, e=w0 | wake | sleep
 
-### no-critique conjecture
+### matched no-critique conjecture
 
 case | prediction | truth
 --- | --- | ---
 step=3, a=r0, b=d1, c=m1, e=w0 | wake | wake
 step=2, a=r1, b=d1, c=m1, e=w1 | wake | wake
-step=0, a=r0, b=d0, c=m1, e=w0 | wake | bloom
+step=0, a=r0, b=d0, c=m1, e=w0 | bloom | bloom
 step=2, a=r0, b=d0, c=m1, e=w1 | wake | wake
 step=4, a=r1, b=d1, c=m1, e=w1 | wake | wake
 step=0, a=r0, b=d1, c=m0, e=w1 | wake | wake
-step=0, a=r0, b=d1, c=m1, e=w1 | wake | bloom
-step=0, a=r0, b=d1, c=m0, e=w0 | wake | sleep
+step=0, a=r0, b=d1, c=m1, e=w1 | bloom | bloom
+step=0, a=r0, b=d1, c=m0, e=w0 | sleep | sleep
+
+### matched passive extra observations
+
+case | prediction | truth
+--- | --- | ---
+step=3, a=r0, b=d1, c=m1, e=w0 | wake | wake
+step=2, a=r1, b=d1, c=m1, e=w1 | wake | wake
+step=0, a=r0, b=d0, c=m1, e=w0 | bloom | bloom
+step=2, a=r0, b=d0, c=m1, e=w1 | wake | wake
+step=4, a=r1, b=d1, c=m1, e=w1 | wake | wake
+step=0, a=r0, b=d1, c=m0, e=w1 | wake | wake
+step=0, a=r0, b=d1, c=m1, e=w1 | bloom | bloom
+step=0, a=r0, b=d1, c=m0, e=w0 | sleep | sleep
+
+### matched random tests
+
+case | prediction | truth
+--- | --- | ---
+step=3, a=r0, b=d1, c=m1, e=w0 | wake | wake
+step=2, a=r1, b=d1, c=m1, e=w1 | wake | wake
+step=0, a=r0, b=d0, c=m1, e=w0 | bloom | bloom
+step=2, a=r0, b=d0, c=m1, e=w1 | wake | wake
+step=4, a=r1, b=d1, c=m1, e=w1 | wake | wake
+step=0, a=r0, b=d1, c=m0, e=w1 | wake | wake
+step=0, a=r0, b=d1, c=m1, e=w1 | bloom | bloom
+step=0, a=r0, b=d1, c=m0, e=w0 | sleep | sleep
 
 ### Deutsch critique loop
 

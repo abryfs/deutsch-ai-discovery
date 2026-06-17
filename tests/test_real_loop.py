@@ -83,10 +83,16 @@ class RealLoopTests(unittest.TestCase):
             self.assertNotIn("Transfer cases:", prompt)
             self.assertNotIn("truth score", prompt.lower())
             self.assertNotIn("delta", prompt.lower())
+            self.assertNotIn("Freyja", prompt)
+            self.assertNotIn("fjord", prompt)
+            self.assertNotIn("necklace", prompt)
         for prompt in prediction_prompts:
             self.assertIn("Holdout cases:", prompt)
             self.assertIn("Transfer cases:", prompt)
             self.assertNotIn("Experimentable cases:", prompt)
+            self.assertNotIn("Freyja", prompt)
+            self.assertNotIn("fjord", prompt)
+            self.assertNotIn("necklace", prompt)
 
     def test_trajectory_summary_semantics(self) -> None:
         trajectory = [

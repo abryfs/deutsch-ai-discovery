@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import math
+import random
 from collections import Counter, defaultdict
 from collections.abc import Sequence
 from dataclasses import dataclass
@@ -150,7 +151,7 @@ class PurePredictionAgent(DiscoveryAgent):
 
 
 class NoCritiqueAgent(DiscoveryAgent):
-    name = "no-critique conjecture"
+    name = "matched no-critique conjecture"
 
     def run(
         self,
@@ -160,7 +161,7 @@ class NoCritiqueAgent(DiscoveryAgent):
         experiment_cases: Sequence[WorldCase],
         rounds: int,
     ) -> AgentRun:
-        hypothesis = _choose_best(_simple_hypotheses(), public_observations)
+        hypothesis = _choose_best(_causal_hypotheses(), public_observations)
         explanation = _explanation_from_hypothesis(
             self.name,
             hypothesis,
@@ -174,6 +175,95 @@ class NoCritiqueAgent(DiscoveryAgent):
             final=explanation,
             acquired_observations=(),
             critiques=("No criticism pass was allowed, so weak spots remain untested.",),
+            predictions=predictions,
+        )
+
+
+class PassiveExtraObservationAgent(DiscoveryAgent):
+    name = "matched passive extra observations"
+
+    def run(
+        self,
+        world: HiddenWorld,
+        public_observations: Sequence[Observation],
+        holdout_cases: Sequence[WorldCase],
+        experiment_cases: Sequence[WorldCase],
+        rounds: int,
+    ) -> AgentRun:
+        observations = list(public_observations)
+        acquired: list[Observation] = []
+        for case in list(experiment_cases)[:rounds]:
+            observation = world.observe(case)
+            observations.append(observation)
+            acquired.append(observation)
+
+        initial_hypothesis = _choose_best(_causal_hypotheses(), public_observations)
+        final_hypothesis = _choose_best(_causal_hypotheses(), observations)
+        initial = _explanation_from_hypothesis(
+            self.name,
+            initial_hypothesis,
+            "Initial conjecture before extra observations.",
+            decisive_tests=(),
+        )
+        final = _explanation_from_hypothesis(
+            self.name,
+            final_hypothesis,
+            "Revised after receiving extra observations selected without rival-critique logic.",
+            decisive_tests=(),
+        )
+        predictions = {case: final_hypothesis.predict(case, observations) for case in holdout_cases}
+        return AgentRun(
+            agent=self.name,
+            initial=initial,
+            final=final,
+            acquired_observations=tuple(acquired),
+            critiques=("Extra labels were allowed, but no discriminating criticism selected them.",),
+            predictions=predictions,
+        )
+
+
+class RandomTestAgent(DiscoveryAgent):
+    name = "matched random tests"
+
+    def run(
+        self,
+        world: HiddenWorld,
+        public_observations: Sequence[Observation],
+        holdout_cases: Sequence[WorldCase],
+        experiment_cases: Sequence[WorldCase],
+        rounds: int,
+    ) -> AgentRun:
+        rng = random.Random(world.config.seed + 97)
+        selected = list(experiment_cases)
+        rng.shuffle(selected)
+        observations = list(public_observations)
+        acquired: list[Observation] = []
+        for case in selected[:rounds]:
+            observation = world.observe(case)
+            observations.append(observation)
+            acquired.append(observation)
+
+        initial_hypothesis = _choose_best(_causal_hypotheses(), public_observations)
+        final_hypothesis = _choose_best(_causal_hypotheses(), observations)
+        initial = _explanation_from_hypothesis(
+            self.name,
+            initial_hypothesis,
+            "Initial conjecture before random oracle tests.",
+            decisive_tests=(),
+        )
+        final = _explanation_from_hypothesis(
+            self.name,
+            final_hypothesis,
+            "Revised after the same label budget was spent on random experiment cases.",
+            decisive_tests=(),
+        )
+        predictions = {case: final_hypothesis.predict(case, observations) for case in holdout_cases}
+        return AgentRun(
+            agent=self.name,
+            initial=initial,
+            final=final,
+            acquired_observations=tuple(acquired),
+            critiques=("Random tests control for the value of extra labels without active criticism.",),
             predictions=predictions,
         )
 
@@ -243,6 +333,8 @@ def all_agents() -> tuple[DiscoveryAgent, ...]:
         MythPreservingStoryteller(),
         PurePredictionAgent(),
         NoCritiqueAgent(),
+        PassiveExtraObservationAgent(),
+        RandomTestAgent(),
         DeutschCritiqueAgent(),
     )
 

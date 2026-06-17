@@ -186,7 +186,7 @@ def render_real_loop_markdown(result: dict[str, object]) -> str:
         else:
             lines.append(
                 f"- Round {step['round']}: {_case_key(observation.case, True)} -> "
-                f"{observation.outcome}; {observation.myth}"
+                f"{observation.outcome}"
             )
 
     explanation = result["explanation"]

@@ -63,6 +63,9 @@ class RealModelTests(unittest.TestCase):
 
         self.assertEqual(result["model"], "test/model")
         self.assertIn("Public observations", client.last_messages[-1]["content"])
+        self.assertNotIn("Freyja", client.last_messages[-1]["content"])
+        self.assertNotIn("fjord", client.last_messages[-1]["content"])
+        self.assertNotIn("necklace", client.last_messages[-1]["content"])
         self.assertGreaterEqual(result["truth_score"], 0.0)
         self.assertLessEqual(result["truth_score"], 1.0)
 
