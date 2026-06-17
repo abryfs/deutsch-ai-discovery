@@ -1,0 +1,2629 @@
+{
+  "start_seed": 1,
+  "runs": 50,
+  "rounds": 4,
+  "public_count": 10,
+  "holdout_count": 20,
+  "summaries": [
+    {
+      "seed": 1,
+      "winner": "no-critique conjecture",
+      "winning_total": 0.565,
+      "deutsch_rank": 3,
+      "deutsch_total": 0.31499999999999995,
+      "scores": [
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.6,
+          "hard_to_vary": 0.667,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.565
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.82,
+          "reach": 0.3,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.33249999999999996
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.76,
+          "reach": 0.25,
+          "criticizability": 1.0,
+          "error_correction": 0.0,
+          "explanation_score": 0.654,
+          "total": 0.31499999999999995
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.2,
+          "hard_to_vary": 0.0,
+          "reach": 0.2,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.2
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "winner": "no-critique conjecture",
+      "winning_total": 0.4175,
+      "deutsch_rank": 3,
+      "deutsch_total": 0.3825,
+      "scores": [
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.667,
+          "reach": 0.45,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.4175
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.82,
+          "reach": 0.25,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.4125
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.833,
+          "reach": 0.35,
+          "criticizability": 0.458,
+          "error_correction": 0.0,
+          "explanation_score": 0.4935,
+          "total": 0.3825
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.0,
+          "reach": 0.3,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.33249999999999996
+        }
+      ]
+    },
+    {
+      "seed": 3,
+      "winner": "pure prediction",
+      "winning_total": 0.6525,
+      "deutsch_rank": 4,
+      "deutsch_total": 0.355,
+      "scores": [
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.6,
+          "hard_to_vary": 0.82,
+          "reach": 0.75,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.6525
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.667,
+          "reach": 0.6,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.5675
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.0,
+          "reach": 0.55,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.3875
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.25,
+          "hard_to_vary": 0.667,
+          "reach": 0.55,
+          "criticizability": 1.0,
+          "error_correction": 0.0,
+          "explanation_score": 0.6168,
+          "total": 0.355
+        }
+      ]
+    },
+    {
+      "seed": 4,
+      "winner": "no-critique conjecture",
+      "winning_total": 0.55,
+      "deutsch_rank": 2,
+      "deutsch_total": 0.36749999999999994,
+      "scores": [
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.667,
+          "reach": 0.55,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.55
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.833,
+          "reach": 0.4,
+          "criticizability": 1.0,
+          "error_correction": 0.0,
+          "explanation_score": 0.6832,
+          "total": 0.36749999999999994
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.0,
+          "reach": 0.2,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.2975
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.2,
+          "hard_to_vary": 0.82,
+          "reach": 0.25,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.2175
+        }
+      ]
+    },
+    {
+      "seed": 5,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.8475,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.8475,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.9,
+          "hard_to_vary": 0.833,
+          "reach": 0.75,
+          "criticizability": 1.0,
+          "error_correction": 0.0,
+          "explanation_score": 0.6832,
+          "total": 0.8475
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.65,
+          "hard_to_vary": 0.82,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.5975
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.0,
+          "reach": 0.6,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.535
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.667,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.46499999999999997
+        }
+      ]
+    },
+    {
+      "seed": 6,
+      "winner": "Deutsch critique loop",
+      "winning_total": 1.0,
+      "deutsch_rank": 1,
+      "deutsch_total": 1.0,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 1.0,
+          "hard_to_vary": 0.833,
+          "reach": 1.0,
+          "criticizability": 1.0,
+          "error_correction": 0.0,
+          "explanation_score": 0.6832,
+          "total": 1.0
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.82,
+          "reach": 0.65,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.585
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.45,
+          "hard_to_vary": 0.0,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.4675
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.667,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.435
+        }
+      ]
+    },
+    {
+      "seed": 7,
+      "winner": "pure prediction",
+      "winning_total": 0.46499999999999997,
+      "deutsch_rank": 3,
+      "deutsch_total": 0.4325,
+      "scores": [
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.82,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.46499999999999997
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.45,
+          "hard_to_vary": 0.667,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.4325
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.45,
+          "hard_to_vary": 0.667,
+          "reach": 0.4,
+          "criticizability": 1.0,
+          "error_correction": 0.0,
+          "explanation_score": 0.6168,
+          "total": 0.4325
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.2,
+          "hard_to_vary": 0.0,
+          "reach": 0.3,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.235
+        }
+      ]
+    },
+    {
+      "seed": 8,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.55,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.55,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.833,
+          "reach": 0.55,
+          "criticizability": 0.875,
+          "error_correction": 0.0,
+          "explanation_score": 0.63945,
+          "total": 0.55
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.0,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.49750000000000005
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.82,
+          "reach": 0.35,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.4475
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.667,
+          "reach": 0.2,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.42750000000000005
+        }
+      ]
+    },
+    {
+      "seed": 9,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.615,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.615,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.65,
+          "hard_to_vary": 0.833,
+          "reach": 0.55,
+          "criticizability": 1.0,
+          "error_correction": 0.09999999999999998,
+          "explanation_score": 0.7082,
+          "total": 0.615
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.7,
+          "hard_to_vary": 0.82,
+          "reach": 0.45,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.6124999999999999
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.6,
+          "hard_to_vary": 0.0,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.565
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.667,
+          "reach": 0.35,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.48000000000000004
+        }
+      ]
+    },
+    {
+      "seed": 10,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.95,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.95,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.95,
+          "hard_to_vary": 0.833,
+          "reach": 0.95,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.39165,
+          "total": 0.95
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.82,
+          "reach": 0.6,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.47
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.0,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.435
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.667,
+          "reach": 0.35,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.3175
+        }
+      ]
+    },
+    {
+      "seed": 11,
+      "winner": "no-critique conjecture",
+      "winning_total": 0.5249999999999999,
+      "deutsch_rank": 2,
+      "deutsch_total": 0.5125,
+      "scores": [
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.7,
+          "hard_to_vary": 0.667,
+          "reach": 0.2,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.5249999999999999
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.6,
+          "hard_to_vary": 0.667,
+          "reach": 0.35,
+          "criticizability": 1.0,
+          "error_correction": 0.0,
+          "explanation_score": 0.6168,
+          "total": 0.5125
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.82,
+          "reach": 0.25,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.4125
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.0,
+          "reach": 0.15,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.27999999999999997
+        }
+      ]
+    },
+    {
+      "seed": 12,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.6824999999999999,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.6824999999999999,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.7,
+          "hard_to_vary": 0.833,
+          "reach": 0.65,
+          "criticizability": 1.0,
+          "error_correction": 0.09999999999999998,
+          "explanation_score": 0.7082,
+          "total": 0.6824999999999999
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.82,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.49750000000000005
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.667,
+          "reach": 0.45,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.4175
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.0,
+          "reach": 0.3,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.365
+        }
+      ]
+    },
+    {
+      "seed": 13,
+      "winner": "pure prediction",
+      "winning_total": 0.5175000000000001,
+      "deutsch_rank": 3,
+      "deutsch_total": 0.5175000000000001,
+      "scores": [
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.82,
+          "reach": 0.55,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.5175000000000001
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.667,
+          "reach": 0.55,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.5175000000000001
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.667,
+          "reach": 0.55,
+          "criticizability": 1.0,
+          "error_correction": 0.0,
+          "explanation_score": 0.6168,
+          "total": 0.5175000000000001
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.0,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.4
+        }
+      ]
+    },
+    {
+      "seed": 14,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.5175000000000001,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.5175000000000001,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.667,
+          "reach": 0.55,
+          "criticizability": 1.0,
+          "error_correction": 0.2,
+          "explanation_score": 0.6668000000000001,
+          "total": 0.5175000000000001
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.82,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.435
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.0,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.33499999999999996
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.667,
+          "reach": 0.3,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.3
+        }
+      ]
+    },
+    {
+      "seed": 15,
+      "winner": "pure prediction",
+      "winning_total": 0.35250000000000004,
+      "deutsch_rank": 2,
+      "deutsch_total": 0.35250000000000004,
+      "scores": [
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.82,
+          "reach": 0.45,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.35250000000000004
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.667,
+          "reach": 0.45,
+          "criticizability": 1.0,
+          "error_correction": 0.04999999999999999,
+          "explanation_score": 0.6293,
+          "total": 0.35250000000000004
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.25,
+          "hard_to_vary": 0.0,
+          "reach": 0.45,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.32
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.25,
+          "hard_to_vary": 0.667,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.3025
+        }
+      ]
+    },
+    {
+      "seed": 16,
+      "winner": "no-critique conjecture",
+      "winning_total": 0.55,
+      "deutsch_rank": 2,
+      "deutsch_total": 0.55,
+      "scores": [
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.667,
+          "reach": 0.55,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.55
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.667,
+          "reach": 0.55,
+          "criticizability": 1.0,
+          "error_correction": 0.0,
+          "explanation_score": 0.6168,
+          "total": 0.55
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.6,
+          "hard_to_vary": 0.82,
+          "reach": 0.3,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.495
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.0,
+          "reach": 0.2,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.395
+        }
+      ]
+    },
+    {
+      "seed": 17,
+      "winner": "Deutsch critique loop",
+      "winning_total": 1.0,
+      "deutsch_rank": 1,
+      "deutsch_total": 1.0,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 1.0,
+          "hard_to_vary": 0.833,
+          "reach": 1.0,
+          "criticizability": 0.75,
+          "error_correction": 0.0,
+          "explanation_score": 0.5956999999999999,
+          "total": 1.0
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.82,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.46499999999999997
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.45,
+          "hard_to_vary": 0.667,
+          "reach": 0.25,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.38
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.0,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.36749999999999994
+        }
+      ]
+    },
+    {
+      "seed": 18,
+      "winner": "no-critique conjecture",
+      "winning_total": 0.585,
+      "deutsch_rank": 4,
+      "deutsch_total": 0.3025,
+      "scores": [
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.667,
+          "reach": 0.65,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.585
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.82,
+          "reach": 0.55,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.5175000000000001
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.0,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.37
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.25,
+          "hard_to_vary": 0.667,
+          "reach": 0.4,
+          "criticizability": 1.0,
+          "error_correction": 0.0,
+          "explanation_score": 0.6168,
+          "total": 0.3025
+        }
+      ]
+    },
+    {
+      "seed": 19,
+      "winner": "Deutsch critique loop",
+      "winning_total": 1.0,
+      "deutsch_rank": 1,
+      "deutsch_total": 1.0,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 1.0,
+          "hard_to_vary": 0.833,
+          "reach": 1.0,
+          "criticizability": 0.458,
+          "error_correction": 0.0,
+          "explanation_score": 0.4935,
+          "total": 1.0
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.45,
+          "hard_to_vary": 0.667,
+          "reach": 0.25,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.38
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.82,
+          "reach": 0.25,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.34750000000000003
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.15,
+          "hard_to_vary": 0.0,
+          "reach": 0.1,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.1325
+        }
+      ]
+    },
+    {
+      "seed": 20,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.7825,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.7825,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.8,
+          "hard_to_vary": 0.833,
+          "reach": 0.75,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.39165,
+          "total": 0.7825
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.0,
+          "reach": 0.65,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.585
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.667,
+          "reach": 0.65,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.585
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.82,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.435
+        }
+      ]
+    },
+    {
+      "seed": 21,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.5025000000000001,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.5025000000000001,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.45,
+          "hard_to_vary": 0.833,
+          "reach": 0.6,
+          "criticizability": 1.0,
+          "error_correction": 0.10000000000000003,
+          "explanation_score": 0.7082,
+          "total": 0.5025000000000001
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.45,
+          "hard_to_vary": 0.82,
+          "reach": 0.55,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.48500000000000004
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.45,
+          "hard_to_vary": 0.667,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.4675
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.0,
+          "reach": 0.45,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.35250000000000004
+        }
+      ]
+    },
+    {
+      "seed": 22,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.4325,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.4325,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.45,
+          "hard_to_vary": 0.667,
+          "reach": 0.4,
+          "criticizability": 1.0,
+          "error_correction": 0.0,
+          "explanation_score": 0.6168,
+          "total": 0.4325
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.0,
+          "reach": 0.25,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.34750000000000003
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.82,
+          "reach": 0.25,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.2825
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.25,
+          "hard_to_vary": 0.667,
+          "reach": 0.15,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.215
+        }
+      ]
+    },
+    {
+      "seed": 23,
+      "winner": "myth-preserving storyteller",
+      "winning_total": 0.7325,
+      "deutsch_rank": 2,
+      "deutsch_total": 0.7325,
+      "scores": [
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.75,
+          "hard_to_vary": 0.0,
+          "reach": 0.7,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.7325
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.75,
+          "hard_to_vary": 0.667,
+          "reach": 0.7,
+          "criticizability": 1.0,
+          "error_correction": 0.25,
+          "explanation_score": 0.6793,
+          "total": 0.7325
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.6,
+          "hard_to_vary": 0.82,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.565
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.667,
+          "reach": 0.45,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.48250000000000004
+        }
+      ]
+    },
+    {
+      "seed": 24,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.6824999999999999,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.6824999999999999,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.7,
+          "hard_to_vary": 0.667,
+          "reach": 0.65,
+          "criticizability": 1.0,
+          "error_correction": 0.44999999999999996,
+          "explanation_score": 0.7293000000000001,
+          "total": 0.6824999999999999
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.82,
+          "reach": 0.7,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.505
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.0,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.40249999999999997
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.25,
+          "hard_to_vary": 0.667,
+          "reach": 0.65,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.39
+        }
+      ]
+    },
+    {
+      "seed": 25,
+      "winner": "no-critique conjecture",
+      "winning_total": 0.44500000000000006,
+      "deutsch_rank": 2,
+      "deutsch_total": 0.4175,
+      "scores": [
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.667,
+          "reach": 0.25,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.44500000000000006
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.667,
+          "reach": 0.45,
+          "criticizability": 1.0,
+          "error_correction": 0.0,
+          "explanation_score": 0.6168,
+          "total": 0.4175
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.82,
+          "reach": 0.05,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.2775
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.15,
+          "hard_to_vary": 0.0,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.27249999999999996
+        }
+      ]
+    },
+    {
+      "seed": 26,
+      "winner": "Deutsch critique loop",
+      "winning_total": 1.0,
+      "deutsch_rank": 1,
+      "deutsch_total": 1.0,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 1.0,
+          "hard_to_vary": 0.833,
+          "reach": 1.0,
+          "criticizability": 0.458,
+          "error_correction": 0.0,
+          "explanation_score": 0.4935,
+          "total": 1.0
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.6,
+          "hard_to_vary": 0.82,
+          "reach": 0.45,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.5475
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.667,
+          "reach": 0.45,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.48250000000000004
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.0,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.36749999999999994
+        }
+      ]
+    },
+    {
+      "seed": 27,
+      "winner": "Deutsch critique loop",
+      "winning_total": 1.0,
+      "deutsch_rank": 1,
+      "deutsch_total": 1.0,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 1.0,
+          "hard_to_vary": 0.833,
+          "reach": 1.0,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.39165,
+          "total": 1.0
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.82,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.5325
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.0,
+          "reach": 0.35,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.48000000000000004
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.667,
+          "reach": 0.35,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.48000000000000004
+        }
+      ]
+    },
+    {
+      "seed": 28,
+      "winner": "no-critique conjecture",
+      "winning_total": 0.4675,
+      "deutsch_rank": 2,
+      "deutsch_total": 0.3825,
+      "scores": [
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.45,
+          "hard_to_vary": 0.667,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.4675
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.667,
+          "reach": 0.35,
+          "criticizability": 1.0,
+          "error_correction": 0.050000000000000044,
+          "explanation_score": 0.6293,
+          "total": 0.3825
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.0,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.33499999999999996
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.82,
+          "reach": 0.3,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.3
+        }
+      ]
+    },
+    {
+      "seed": 29,
+      "winner": "Deutsch critique loop",
+      "winning_total": 1.0,
+      "deutsch_rank": 1,
+      "deutsch_total": 1.0,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 1.0,
+          "hard_to_vary": 0.833,
+          "reach": 1.0,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.39165,
+          "total": 1.0
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.65,
+          "hard_to_vary": 0.0,
+          "reach": 0.6,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.6325000000000001
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.6,
+          "hard_to_vary": 0.82,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.53
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.667,
+          "reach": 0.35,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.4475
+        }
+      ]
+    },
+    {
+      "seed": 30,
+      "winner": "Deutsch critique loop",
+      "winning_total": 1.0,
+      "deutsch_rank": 1,
+      "deutsch_total": 1.0,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 1.0,
+          "hard_to_vary": 0.833,
+          "reach": 1.0,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.39165,
+          "total": 1.0
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.75,
+          "hard_to_vary": 0.82,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.6625000000000001
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.0,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.5
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.667,
+          "reach": 0.35,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.35
+        }
+      ]
+    },
+    {
+      "seed": 31,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.4,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.4,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.667,
+          "reach": 0.4,
+          "criticizability": 1.0,
+          "error_correction": 0.10000000000000003,
+          "explanation_score": 0.6418,
+          "total": 0.4
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.82,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.33499999999999996
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.0,
+          "reach": 0.25,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.2825
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.667,
+          "reach": 0.25,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.2825
+        }
+      ]
+    },
+    {
+      "seed": 32,
+      "winner": "myth-preserving storyteller",
+      "winning_total": 0.435,
+      "deutsch_rank": 4,
+      "deutsch_total": 0.365,
+      "scores": [
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.0,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.435
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.667,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.40249999999999997
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.82,
+          "reach": 0.35,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.3825
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.667,
+          "reach": 0.3,
+          "criticizability": 1.0,
+          "error_correction": 0.050000000000000044,
+          "explanation_score": 0.6293,
+          "total": 0.365
+        }
+      ]
+    },
+    {
+      "seed": 33,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.9000000000000001,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.9000000000000001,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.9,
+          "hard_to_vary": 0.833,
+          "reach": 0.9,
+          "criticizability": 1.0,
+          "error_correction": 0.0,
+          "explanation_score": 0.6832,
+          "total": 0.9000000000000001
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.45,
+          "hard_to_vary": 0.82,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.4325
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.0,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.33499999999999996
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.667,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.33499999999999996
+        }
+      ]
+    },
+    {
+      "seed": 34,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.87,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.87,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.8,
+          "hard_to_vary": 0.833,
+          "reach": 1.0,
+          "criticizability": 0.458,
+          "error_correction": 0.0,
+          "explanation_score": 0.4935,
+          "total": 0.87
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.6,
+          "hard_to_vary": 0.82,
+          "reach": 0.45,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.5475
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.0,
+          "reach": 0.1,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.295
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.667,
+          "reach": 0.1,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.295
+        }
+      ]
+    },
+    {
+      "seed": 35,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.9650000000000001,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.9650000000000001,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 1.0,
+          "hard_to_vary": 0.833,
+          "reach": 0.9,
+          "criticizability": 0.458,
+          "error_correction": 0.0,
+          "explanation_score": 0.4935,
+          "total": 0.9650000000000001
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.82,
+          "reach": 0.45,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.385
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.667,
+          "reach": 0.45,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.35250000000000004
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.25,
+          "hard_to_vary": 0.0,
+          "reach": 0.35,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.285
+        }
+      ]
+    },
+    {
+      "seed": 36,
+      "winner": "pure prediction",
+      "winning_total": 0.565,
+      "deutsch_rank": 2,
+      "deutsch_total": 0.4525,
+      "scores": [
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.6,
+          "hard_to_vary": 0.82,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.565
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.667,
+          "reach": 0.55,
+          "criticizability": 1.0,
+          "error_correction": 0.0,
+          "explanation_score": 0.6168,
+          "total": 0.4525
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.45,
+          "hard_to_vary": 0.667,
+          "reach": 0.45,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.45000000000000007
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.0,
+          "reach": 0.35,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.35
+        }
+      ]
+    },
+    {
+      "seed": 37,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.73,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.73,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.8,
+          "hard_to_vary": 0.833,
+          "reach": 0.6,
+          "criticizability": 0.458,
+          "error_correction": 0.15000000000000002,
+          "explanation_score": 0.531,
+          "total": 0.73
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.667,
+          "reach": 0.6,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.4375
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.82,
+          "reach": 0.35,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.35
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.45,
+          "hard_to_vary": 0.0,
+          "reach": 0.1,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.3275
+        }
+      ]
+    },
+    {
+      "seed": 38,
+      "winner": "Deutsch critique loop",
+      "winning_total": 1.0,
+      "deutsch_rank": 1,
+      "deutsch_total": 1.0,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 1.0,
+          "hard_to_vary": 0.833,
+          "reach": 1.0,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.39165,
+          "total": 1.0
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.65,
+          "hard_to_vary": 0.0,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.5625
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.65,
+          "hard_to_vary": 0.667,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.5625
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.82,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.435
+        }
+      ]
+    },
+    {
+      "seed": 39,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.37,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.37,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.667,
+          "reach": 0.5,
+          "criticizability": 1.0,
+          "error_correction": 0.09999999999999998,
+          "explanation_score": 0.6418,
+          "total": 0.37
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.0,
+          "reach": 0.2,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.2975
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.667,
+          "reach": 0.2,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.2975
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.2,
+          "hard_to_vary": 0.82,
+          "reach": 0.3,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.235
+        }
+      ]
+    },
+    {
+      "seed": 40,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.78,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.78,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.85,
+          "hard_to_vary": 0.667,
+          "reach": 0.65,
+          "criticizability": 1.0,
+          "error_correction": 0.0,
+          "explanation_score": 0.6168,
+          "total": 0.78
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.7,
+          "hard_to_vary": 0.82,
+          "reach": 0.3,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.5599999999999999
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.6,
+          "hard_to_vary": 0.667,
+          "reach": 0.35,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.5125
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.0,
+          "reach": 0.2,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.395
+        }
+      ]
+    },
+    {
+      "seed": 41,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.6,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.6,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.6,
+          "hard_to_vary": 0.667,
+          "reach": 0.6,
+          "criticizability": 1.0,
+          "error_correction": 0.25,
+          "explanation_score": 0.6793,
+          "total": 0.6
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.82,
+          "reach": 0.6,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.5675
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.667,
+          "reach": 0.45,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.4175
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.0,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.36749999999999994
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "winner": "Deutsch critique loop",
+      "winning_total": 1.0,
+      "deutsch_rank": 1,
+      "deutsch_total": 1.0,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 1.0,
+          "hard_to_vary": 0.833,
+          "reach": 1.0,
+          "criticizability": 0.458,
+          "error_correction": 0.0,
+          "explanation_score": 0.4935,
+          "total": 1.0
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.2,
+          "hard_to_vary": 0.82,
+          "reach": 0.55,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.3225
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.25,
+          "hard_to_vary": 0.667,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.3025
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.15,
+          "hard_to_vary": 0.0,
+          "reach": 0.3,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.2025
+        }
+      ]
+    },
+    {
+      "seed": 43,
+      "winner": "pure prediction",
+      "winning_total": 0.5175000000000001,
+      "deutsch_rank": 2,
+      "deutsch_total": 0.41500000000000004,
+      "scores": [
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.5,
+          "hard_to_vary": 0.82,
+          "reach": 0.55,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.5175000000000001
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.45,
+          "hard_to_vary": 0.667,
+          "reach": 0.35,
+          "criticizability": 1.0,
+          "error_correction": 0.04999999999999999,
+          "explanation_score": 0.6293,
+          "total": 0.41500000000000004
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.0,
+          "reach": 0.35,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.3825
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.667,
+          "reach": 0.35,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.3825
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "winner": "myth-preserving storyteller",
+      "winning_total": 0.5475,
+      "deutsch_rank": 2,
+      "deutsch_total": 0.35250000000000004,
+      "scores": [
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.6,
+          "hard_to_vary": 0.0,
+          "reach": 0.45,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.5475
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.667,
+          "reach": 0.45,
+          "criticizability": 1.0,
+          "error_correction": 0.0,
+          "explanation_score": 0.6168,
+          "total": 0.35250000000000004
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.82,
+          "reach": 0.35,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.35
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.2,
+          "hard_to_vary": 0.667,
+          "reach": 0.55,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.3225
+        }
+      ]
+    },
+    {
+      "seed": 45,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.6174999999999999,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.6174999999999999,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.6,
+          "hard_to_vary": 0.667,
+          "reach": 0.65,
+          "criticizability": 1.0,
+          "error_correction": 0.3,
+          "explanation_score": 0.6918,
+          "total": 0.6174999999999999
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.45,
+          "hard_to_vary": 0.82,
+          "reach": 0.6,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.5025000000000001
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.0,
+          "reach": 0.35,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.3825
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.667,
+          "reach": 0.3,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.33249999999999996
+        }
+      ]
+    },
+    {
+      "seed": 46,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.49750000000000005,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.49750000000000005,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.833,
+          "reach": 0.4,
+          "criticizability": 1.0,
+          "error_correction": 0.30000000000000004,
+          "explanation_score": 0.7582,
+          "total": 0.49750000000000005
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.82,
+          "reach": 0.3,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.33249999999999996
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.25,
+          "hard_to_vary": 0.667,
+          "reach": 0.45,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.32
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.0,
+          "reach": 0.25,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.31499999999999995
+        }
+      ]
+    },
+    {
+      "seed": 47,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.635,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.635,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.6,
+          "hard_to_vary": 0.667,
+          "reach": 0.7,
+          "criticizability": 1.0,
+          "error_correction": 0.04999999999999993,
+          "explanation_score": 0.6293,
+          "total": 0.635
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.55,
+          "hard_to_vary": 0.82,
+          "reach": 0.7,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.6025
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.667,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.36749999999999994
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.0,
+          "reach": 0.35,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.3175
+        }
+      ]
+    },
+    {
+      "seed": 48,
+      "winner": "Deutsch critique loop",
+      "winning_total": 1.0,
+      "deutsch_rank": 1,
+      "deutsch_total": 1.0,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 1.0,
+          "hard_to_vary": 0.833,
+          "reach": 1.0,
+          "criticizability": 0.458,
+          "error_correction": 0.0,
+          "explanation_score": 0.4935,
+          "total": 1.0
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.45,
+          "hard_to_vary": 0.82,
+          "reach": 0.55,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.48500000000000004
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.0,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.435
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.667,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.435
+        }
+      ]
+    },
+    {
+      "seed": 49,
+      "winner": "no-critique conjecture",
+      "winning_total": 0.33499999999999996,
+      "deutsch_rank": 2,
+      "deutsch_total": 0.235,
+      "scores": [
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.3,
+          "hard_to_vary": 0.667,
+          "reach": 0.4,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.33499999999999996
+        },
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.2,
+          "hard_to_vary": 0.833,
+          "reach": 0.3,
+          "criticizability": 1.0,
+          "error_correction": 0.0,
+          "explanation_score": 0.6832,
+          "total": 0.235
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.2,
+          "hard_to_vary": 0.0,
+          "reach": 0.15,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.1825
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.2,
+          "hard_to_vary": 0.82,
+          "reach": 0.15,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.1825
+        }
+      ]
+    },
+    {
+      "seed": 50,
+      "winner": "Deutsch critique loop",
+      "winning_total": 0.5225,
+      "deutsch_rank": 1,
+      "deutsch_total": 0.5225,
+      "scores": [
+        {
+          "agent": "Deutsch critique loop",
+          "prediction_accuracy": 0.4,
+          "hard_to_vary": 0.667,
+          "reach": 0.75,
+          "criticizability": 1.0,
+          "error_correction": 0.050000000000000044,
+          "explanation_score": 0.6293,
+          "total": 0.5225
+        },
+        {
+          "agent": "myth-preserving storyteller",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.0,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.05845,
+          "total": 0.40249999999999997
+        },
+        {
+          "agent": "no-critique conjecture",
+          "prediction_accuracy": 0.35,
+          "hard_to_vary": 0.667,
+          "reach": 0.5,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.32525000000000004,
+          "total": 0.40249999999999997
+        },
+        {
+          "agent": "pure prediction",
+          "prediction_accuracy": 0.25,
+          "hard_to_vary": 0.82,
+          "reach": 0.45,
+          "criticizability": 0.167,
+          "error_correction": 0.0,
+          "explanation_score": 0.38645,
+          "total": 0.32
+        }
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "agent": "no-critique conjecture",
+      "wins": 9,
+      "avg_total": 0.41945,
+      "stdev_total": 0.09138990532831495,
+      "avg_prediction": 0.424,
+      "avg_reach": 0.41100000000000003,
+      "avg_explanation": 0.32525000000000004,
+      "avg_criticizability": 0.16699999999999998
+    },
+    {
+      "agent": "pure prediction",
+      "wins": 6,
+      "avg_total": 0.4473,
+      "stdev_total": 0.11656525718958231,
+      "avg_prediction": 0.455,
+      "avg_reach": 0.433,
+      "avg_explanation": 0.38645,
+      "avg_criticizability": 0.16699999999999998
+    },
+    {
+      "agent": "Deutsch critique loop",
+      "wins": 32,
+      "avg_total": 0.6378,
+      "stdev_total": 0.25168596808446086,
+      "avg_prediction": 0.635,
+      "avg_reach": 0.643,
+      "avg_explanation": 0.5962810000000001,
+      "avg_criticizability": 0.80582
+    },
+    {
+      "agent": "myth-preserving storyteller",
+      "wins": 3,
+      "avg_total": 0.38049999999999995,
+      "stdev_total": 0.11771203187856198,
+      "avg_prediction": 0.384,
+      "avg_reach": 0.374,
+      "avg_explanation": 0.05845000000000001,
+      "avg_criticizability": 0.16699999999999998
+    }
+  ],
+  "failure_cases": [
+    {
+      "seed": 1,
+      "winner": "no-critique conjecture",
+      "deutsch_rank": 3,
+      "deutsch_total": 0.31499999999999995,
+      "winning_total": 0.565
+    },
+    {
+      "seed": 2,
+      "winner": "no-critique conjecture",
+      "deutsch_rank": 3,
+      "deutsch_total": 0.3825,
+      "winning_total": 0.4175
+    },
+    {
+      "seed": 3,
+      "winner": "pure prediction",
+      "deutsch_rank": 4,
+      "deutsch_total": 0.355,
+      "winning_total": 0.6525
+    },
+    {
+      "seed": 4,
+      "winner": "no-critique conjecture",
+      "deutsch_rank": 2,
+      "deutsch_total": 0.36749999999999994,
+      "winning_total": 0.55
+    },
+    {
+      "seed": 7,
+      "winner": "pure prediction",
+      "deutsch_rank": 3,
+      "deutsch_total": 0.4325,
+      "winning_total": 0.46499999999999997
+    },
+    {
+      "seed": 11,
+      "winner": "no-critique conjecture",
+      "deutsch_rank": 2,
+      "deutsch_total": 0.5125,
+      "winning_total": 0.5249999999999999
+    },
+    {
+      "seed": 13,
+      "winner": "pure prediction",
+      "deutsch_rank": 3,
+      "deutsch_total": 0.5175000000000001,
+      "winning_total": 0.5175000000000001
+    },
+    {
+      "seed": 15,
+      "winner": "pure prediction",
+      "deutsch_rank": 2,
+      "deutsch_total": 0.35250000000000004,
+      "winning_total": 0.35250000000000004
+    },
+    {
+      "seed": 16,
+      "winner": "no-critique conjecture",
+      "deutsch_rank": 2,
+      "deutsch_total": 0.55,
+      "winning_total": 0.55
+    },
+    {
+      "seed": 18,
+      "winner": "no-critique conjecture",
+      "deutsch_rank": 4,
+      "deutsch_total": 0.3025,
+      "winning_total": 0.585
+    },
+    {
+      "seed": 23,
+      "winner": "myth-preserving storyteller",
+      "deutsch_rank": 2,
+      "deutsch_total": 0.7325,
+      "winning_total": 0.7325
+    },
+    {
+      "seed": 25,
+      "winner": "no-critique conjecture",
+      "deutsch_rank": 2,
+      "deutsch_total": 0.4175,
+      "winning_total": 0.44500000000000006
+    },
+    {
+      "seed": 28,
+      "winner": "no-critique conjecture",
+      "deutsch_rank": 2,
+      "deutsch_total": 0.3825,
+      "winning_total": 0.4675
+    },
+    {
+      "seed": 32,
+      "winner": "myth-preserving storyteller",
+      "deutsch_rank": 4,
+      "deutsch_total": 0.365,
+      "winning_total": 0.435
+    },
+    {
+      "seed": 36,
+      "winner": "pure prediction",
+      "deutsch_rank": 2,
+      "deutsch_total": 0.4525,
+      "winning_total": 0.565
+    },
+    {
+      "seed": 43,
+      "winner": "pure prediction",
+      "deutsch_rank": 2,
+      "deutsch_total": 0.41500000000000004,
+      "winning_total": 0.5175000000000001
+    },
+    {
+      "seed": 44,
+      "winner": "myth-preserving storyteller",
+      "deutsch_rank": 2,
+      "deutsch_total": 0.35250000000000004,
+      "winning_total": 0.5475
+    },
+    {
+      "seed": 49,
+      "winner": "no-critique conjecture",
+      "deutsch_rank": 2,
+      "deutsch_total": 0.235,
+      "winning_total": 0.33499999999999996
+    }
+  ]
+}

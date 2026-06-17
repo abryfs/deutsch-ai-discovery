@@ -1,0 +1,451 @@
+{
+  "seed": 17,
+  "rounds": 4,
+  "public_observations": [
+    {
+      "case": {
+        "turn": 0,
+        "realm": "north",
+        "distance": "near",
+        "moon": "bright",
+        "wind": "restless"
+      },
+      "outcome": "wake",
+      "myth": "When Freyja polishes her necklace, stands near the hearth, and the ravens quarrel, upper fjord: the gardens stir."
+    },
+    {
+      "case": {
+        "turn": 3,
+        "realm": "south",
+        "distance": "near",
+        "moon": "bright",
+        "wind": "restless"
+      },
+      "outcome": "sleep",
+      "myth": "When Freyja polishes her necklace, stands near the hearth, and the ravens quarrel, lower fjord: the gardens sleep."
+    },
+    {
+      "case": {
+        "turn": 2,
+        "realm": "north",
+        "distance": "far",
+        "moon": "dark",
+        "wind": "restless"
+      },
+      "outcome": "wake",
+      "myth": "When Freyja hides her necklace, stands behind the veil, and the ravens quarrel, upper fjord: the gardens stir."
+    },
+    {
+      "case": {
+        "turn": 2,
+        "realm": "south",
+        "distance": "near",
+        "moon": "dark",
+        "wind": "still"
+      },
+      "outcome": "bloom",
+      "myth": "When Freyja hides her necklace, stands near the hearth, and the ravens rest, lower fjord: the gardens bloom."
+    },
+    {
+      "case": {
+        "turn": 6,
+        "realm": "south",
+        "distance": "far",
+        "moon": "bright",
+        "wind": "still"
+      },
+      "outcome": "sleep",
+      "myth": "When Freyja polishes her necklace, stands behind the veil, and the ravens rest, lower fjord: the gardens sleep."
+    },
+    {
+      "case": {
+        "turn": 3,
+        "realm": "south",
+        "distance": "near",
+        "moon": "dark",
+        "wind": "restless"
+      },
+      "outcome": "wake",
+      "myth": "When Freyja hides her necklace, stands near the hearth, and the ravens quarrel, lower fjord: the gardens stir."
+    },
+    {
+      "case": {
+        "turn": 4,
+        "realm": "south",
+        "distance": "near",
+        "moon": "bright",
+        "wind": "still"
+      },
+      "outcome": "wake",
+      "myth": "When Freyja polishes her necklace, stands near the hearth, and the ravens rest, lower fjord: the gardens stir."
+    },
+    {
+      "case": {
+        "turn": 9,
+        "realm": "north",
+        "distance": "near",
+        "moon": "dark",
+        "wind": "still"
+      },
+      "outcome": "wake",
+      "myth": "When Freyja hides her necklace, stands near the hearth, and the ravens rest, upper fjord: the gardens stir."
+    },
+    {
+      "case": {
+        "turn": 5,
+        "realm": "south",
+        "distance": "far",
+        "moon": "bright",
+        "wind": "still"
+      },
+      "outcome": "sleep",
+      "myth": "When Freyja polishes her necklace, stands behind the veil, and the ravens rest, lower fjord: the gardens sleep."
+    },
+    {
+      "case": {
+        "turn": 6,
+        "realm": "north",
+        "distance": "far",
+        "moon": "dark",
+        "wind": "still"
+      },
+      "outcome": "sleep",
+      "myth": "When Freyja hides her necklace, stands behind the veil, and the ravens rest, upper fjord: the gardens sleep."
+    }
+  ],
+  "holdout_truth": {
+    "{'turn': 4, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
+    "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+    "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "bloom",
+    "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+    "{'turn': 6, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+    "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 6, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+    "{'turn': 9, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+    "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+    "{'turn': 4, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+    "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 2, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+    "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+    "{'turn': 5, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "bloom",
+    "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+    "{'turn': 5, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
+    "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+    "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+    "{'turn': 0, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake"
+  },
+  "transfer_truth": {
+    "{'turn': 5, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+    "{'turn': 7, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "bloom",
+    "{'turn': 2, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
+    "{'turn': 9, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 8, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 8, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+    "{'turn': 4, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+    "{'turn': 8, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+    "{'turn': 5, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+    "{'turn': 5, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+    "{'turn': 9, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+    "{'turn': 0, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
+    "{'turn': 0, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+    "{'turn': 6, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
+    "{'turn': 8, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "sleep",
+    "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+    "{'turn': 0, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+    "{'turn': 0, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
+    "{'turn': 8, 'realm': 'south', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "sleep"
+  },
+  "runs": [
+    {
+      "agent": "myth-preserving storyteller",
+      "initial": {
+        "agent": "myth-preserving storyteller",
+        "title": "Freyja's moods",
+        "causal_terms": [],
+        "text": "The realm changes because Freyja alternates between hiding and revealing her favor. New outcomes can be absorbed as new moods.",
+        "falsifier": "No single observation would decisively refute a story with new moods.",
+        "arbitrary_clauses": 7,
+        "decisive_tests": []
+      },
+      "final": {
+        "agent": "myth-preserving storyteller",
+        "title": "Freyja's moods",
+        "causal_terms": [],
+        "text": "The realm changes because Freyja alternates between hiding and revealing her favor. New outcomes can be absorbed as new moods.",
+        "falsifier": "No single observation would decisively refute a story with new moods.",
+        "arbitrary_clauses": 7,
+        "decisive_tests": []
+      },
+      "acquired_observations": [],
+      "critiques": [
+        "The explanation is easy to vary because any surprise becomes a new mood."
+      ],
+      "predictions": {
+        "{'turn': 4, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 6, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 6, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 9, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 4, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 5, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 5, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake"
+      }
+    },
+    {
+      "agent": "pure prediction",
+      "initial": {
+        "agent": "pure prediction",
+        "title": "surface lookup",
+        "causal_terms": [
+          "realm",
+          "distance",
+          "moon"
+        ],
+        "text": "This agent predicts by matching surface features and does not claim a causal mechanism. The current explanation uses realm, distance, moon. It is better when removing or changing one term damages predictions.",
+        "falsifier": "A decisive refutation would be an unobserved case where a close rival predicts a different outcome and the current explanation loses.",
+        "arbitrary_clauses": 3,
+        "decisive_tests": []
+      },
+      "final": {
+        "agent": "pure prediction",
+        "title": "surface lookup",
+        "causal_terms": [
+          "realm",
+          "distance",
+          "moon"
+        ],
+        "text": "This agent predicts by matching surface features and does not claim a causal mechanism. The current explanation uses realm, distance, moon. It is better when removing or changing one term damages predictions.",
+        "falsifier": "A decisive refutation would be an unobserved case where a close rival predicts a different outcome and the current explanation loses.",
+        "arbitrary_clauses": 3,
+        "decisive_tests": []
+      },
+      "acquired_observations": [],
+      "critiques": [
+        "It predicts labels but has no account of why these variables matter."
+      ],
+      "predictions": {
+        "{'turn': 4, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
+        "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 6, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 6, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 9, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 4, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+        "{'turn': 5, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+        "{'turn': 5, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "bloom"
+      }
+    },
+    {
+      "agent": "no-critique conjecture",
+      "initial": {
+        "agent": "no-critique conjecture",
+        "title": "cycle-only",
+        "causal_terms": [
+          "cycle"
+        ],
+        "text": "The first plausible causal conjecture is kept without asking for risky tests. The current explanation uses cycle. It is better when removing or changing one term damages predictions.",
+        "falsifier": "A decisive refutation would be an unobserved case where a close rival predicts a different outcome and the current explanation loses.",
+        "arbitrary_clauses": 0,
+        "decisive_tests": []
+      },
+      "final": {
+        "agent": "no-critique conjecture",
+        "title": "cycle-only",
+        "causal_terms": [
+          "cycle"
+        ],
+        "text": "The first plausible causal conjecture is kept without asking for risky tests. The current explanation uses cycle. It is better when removing or changing one term damages predictions.",
+        "falsifier": "A decisive refutation would be an unobserved case where a close rival predicts a different outcome and the current explanation loses.",
+        "arbitrary_clauses": 0,
+        "decisive_tests": []
+      },
+      "acquired_observations": [],
+      "critiques": [
+        "No criticism pass was allowed, so weak spots remain untested."
+      ],
+      "predictions": {
+        "{'turn': 4, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+        "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+        "{'turn': 6, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+        "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 6, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "sleep",
+        "{'turn': 9, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 4, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+        "{'turn': 5, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "sleep",
+        "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 5, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 0, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake"
+      }
+    },
+    {
+      "agent": "Deutsch critique loop",
+      "initial": {
+        "agent": "Deutsch critique loop",
+        "title": "interaction pair model",
+        "causal_terms": [
+          "realm_moon",
+          "distance_wind"
+        ],
+        "text": "Initial conjecture before criticism. The current explanation uses realm_moon, distance_wind. It is better when removing or changing one term damages predictions.",
+        "falsifier": "A decisive refutation would be an unobserved case where a close rival predicts a different outcome and the current explanation loses.",
+        "arbitrary_clauses": 0,
+        "decisive_tests": []
+      },
+      "final": {
+        "agent": "Deutsch critique loop",
+        "title": "interaction pair model",
+        "causal_terms": [
+          "realm_moon",
+          "distance_wind"
+        ],
+        "text": "Revised conjecture after exposing rival explanations to risky tests. The current explanation uses realm_moon, distance_wind. It is better when removing or changing one term damages predictions.",
+        "falsifier": "A decisive refutation would be an unobserved case where a close rival predicts a different outcome and the current explanation loses.",
+        "arbitrary_clauses": 0,
+        "decisive_tests": [
+          {
+            "turn": 0,
+            "realm": "north",
+            "distance": "near",
+            "moon": "dark",
+            "wind": "restless"
+          },
+          {
+            "turn": 0,
+            "realm": "north",
+            "distance": "near",
+            "moon": "bright",
+            "wind": "still"
+          }
+        ]
+      },
+      "acquired_observations": [
+        {
+          "case": {
+            "turn": 0,
+            "realm": "north",
+            "distance": "near",
+            "moon": "dark",
+            "wind": "restless"
+          },
+          "outcome": "sleep",
+          "myth": "When Freyja hides her necklace, stands near the hearth, and the ravens quarrel, upper fjord: the gardens sleep."
+        },
+        {
+          "case": {
+            "turn": 0,
+            "realm": "north",
+            "distance": "near",
+            "moon": "bright",
+            "wind": "still"
+          },
+          "outcome": "bloom",
+          "myth": "When Freyja polishes her necklace, stands near the hearth, and the ravens rest, upper fjord: the gardens bloom."
+        }
+      ],
+      "critiques": [
+        "Criticism: interaction pair model and cycle-only both fit what is known, so ask a risky unobserved test where they disagree.",
+        "Criticism: interaction pair model and cycle-only both fit what is known, so ask a risky unobserved test where they disagree.",
+        "interaction pair model currently has no close rival on observed cases."
+      ],
+      "predictions": {
+        "{'turn': 4, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'still'}": "bloom",
+        "{'turn': 7, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+        "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "bloom",
+        "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+        "{'turn': 6, 'realm': 'north', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "sleep",
+        "{'turn': 2, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 6, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+        "{'turn': 9, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+        "{'turn': 3, 'realm': 'north', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "wake",
+        "{'turn': 4, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'restless'}": "wake",
+        "{'turn': 1, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'restless'}": "bloom",
+        "{'turn': 7, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+        "{'turn': 5, 'realm': 'north', 'distance': 'near', 'moon': 'bright', 'wind': 'still'}": "bloom",
+        "{'turn': 4, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+        "{'turn': 5, 'realm': 'north', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'still'}": "wake",
+        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'bright', 'wind': 'still'}": "sleep",
+        "{'turn': 2, 'realm': 'south', 'distance': 'far', 'moon': 'dark', 'wind': 'restless'}": "bloom",
+        "{'turn': 0, 'realm': 'south', 'distance': 'near', 'moon': 'dark', 'wind': 'restless'}": "wake"
+      }
+    }
+  ],
+  "scores": [
+    {
+      "agent": "Deutsch critique loop",
+      "prediction_accuracy": 1.0,
+      "hard_to_vary": 0.833,
+      "reach": 1.0,
+      "criticizability": 0.75,
+      "error_correction": 0.0,
+      "explanation_score": 0.5956999999999999,
+      "total": 1.0
+    },
+    {
+      "agent": "pure prediction",
+      "prediction_accuracy": 0.5,
+      "hard_to_vary": 0.82,
+      "reach": 0.4,
+      "criticizability": 0.167,
+      "error_correction": 0.0,
+      "explanation_score": 0.38645,
+      "total": 0.46499999999999997
+    },
+    {
+      "agent": "no-critique conjecture",
+      "prediction_accuracy": 0.45,
+      "hard_to_vary": 0.667,
+      "reach": 0.25,
+      "criticizability": 0.167,
+      "error_correction": 0.0,
+      "explanation_score": 0.32525000000000004,
+      "total": 0.38
+    },
+    {
+      "agent": "myth-preserving storyteller",
+      "prediction_accuracy": 0.35,
+      "hard_to_vary": 0.0,
+      "reach": 0.4,
+      "criticizability": 0.167,
+      "error_correction": 0.0,
+      "explanation_score": 0.05845,
+      "total": 0.36749999999999994
+    }
+  ],
+  "hidden_config": "seed=17, family=interaction, period=10, axial_phase=4, heat_lag=2, weights=(axial=2.37, distance=0.71, moon=-0.32, wind=0.25, interaction=0.98)"
+}

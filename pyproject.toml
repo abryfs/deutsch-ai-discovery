@@ -1,0 +1,14 @@
+[project]
+name = "deutsch-ai-discovery"
+version = "0.1.0"
+description = "A small Deutsch-style AI discovery experiment with hidden synthetic worlds."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+deutsch-discovery = "deutsch_ai_discovery.experiment:main"
+deutsch-benchmark = "deutsch_ai_discovery.benchmark:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

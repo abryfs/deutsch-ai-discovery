@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="360" viewBox="0 0 980 360" role="img" aria-labelledby="title desc">
+  <title id="title">Deutsch-style explanation loop</title>
+  <desc id="desc">A hidden world generates mythic observations. Agents conjecture explanations, critics request risky tests, an oracle reveals results, and holdout cases score reach.</desc>
+  <rect width="980" height="360" fill="#f8fafc"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif">
+    <text x="40" y="52" font-size="28" font-weight="700" fill="#0f172a">Deutsch-Style AI Discovery Loop</text>
+    <text x="40" y="82" font-size="15" fill="#475569">The answer is hidden. Progress comes from conjectures surviving criticism and risky tests.</text>
+
+    <g fill="#ffffff" stroke="#cbd5e1" stroke-width="2">
+      <rect x="40" y="125" width="145" height="86" rx="16"/>
+      <rect x="225" y="125" width="145" height="86" rx="16"/>
+      <rect x="410" y="125" width="145" height="86" rx="16"/>
+      <rect x="595" y="125" width="145" height="86" rx="16"/>
+      <rect x="780" y="125" width="145" height="86" rx="16"/>
+    </g>
+
+    <g font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">
+      <text x="112.5" y="158">Hidden world</text>
+      <text x="297.5" y="158">Mythic data</text>
+      <text x="482.5" y="158">Conjecture</text>
+      <text x="667.5" y="158">Criticism</text>
+      <text x="852.5" y="158">Reach test</text>
+    </g>
+
+    <g font-size="12.5" fill="#475569" text-anchor="middle">
+      <text x="112.5" y="181">Generated after</text>
+      <text x="112.5" y="198">the run starts</text>
+      <text x="297.5" y="181">Freyja-like</text>
+      <text x="297.5" y="198">surface stories</text>
+      <text x="482.5" y="181">Candidate causal</text>
+      <text x="482.5" y="198">explanation</text>
+      <text x="667.5" y="181">Ask where rival</text>
+      <text x="667.5" y="198">theories differ</text>
+      <text x="852.5" y="181">Score unseen and</text>
+      <text x="852.5" y="198">transfer cases</text>
+    </g>
+
+    <g stroke="#334155" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+      <path d="M185 168 H217"/>
+      <path d="M370 168 H402"/>
+      <path d="M555 168 H587"/>
+      <path d="M740 168 H772"/>
+      <path d="M668 211 C668 285 482 285 482 219"/>
+    </g>
+
+    <text x="575" y="292" font-size="13" fill="#475569" text-anchor="middle">oracle result revises or rejects the explanation</text>
+
+    <g>
+      <rect x="40" y="255" width="300" height="56" rx="12" fill="#e0f2fe" stroke="#7dd3fc"/>
+      <text x="60" y="278" font-size="14" font-weight="700" fill="#075985">Anti-cheating rule</text>
+      <text x="60" y="298" font-size="13" fill="#075985">The hidden causal rule is revealed only after scoring.</text>
+    </g>
+  </g>
+</svg>

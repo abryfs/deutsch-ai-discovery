@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="330" viewBox="0 0 980 330" role="img" aria-labelledby="title desc">
+  <title id="title">Truth score separated from explanation diagnostics</title>
+  <desc id="desc">The headline benchmark is hidden prediction and transfer reach. Hard-to-vary, criticizability, and error correction are reported separately as diagnostics.</desc>
+  <rect width="980" height="330" fill="#f8fafc"/>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif">
+    <text x="40" y="52" font-size="28" font-weight="700" fill="#0f172a">What Counts As Winning?</text>
+    <text x="40" y="82" font-size="15" fill="#475569">The benchmark no longer rewards an agent just for sounding Deutsch-like.</text>
+
+    <rect x="55" y="118" width="390" height="150" rx="18" fill="#dcfce7" stroke="#86efac" stroke-width="2"/>
+    <text x="85" y="155" font-size="21" font-weight="700" fill="#166534">Headline truth score</text>
+    <text x="85" y="188" font-size="15" fill="#166534">65% hidden holdout prediction</text>
+    <text x="85" y="215" font-size="15" fill="#166534">35% transfer-world reach</text>
+    <text x="85" y="242" font-size="13" fill="#166534">This determines benchmark winners.</text>
+
+    <rect x="535" y="118" width="390" height="150" rx="18" fill="#eef2ff" stroke="#c7d2fe" stroke-width="2"/>
+    <text x="565" y="155" font-size="21" font-weight="700" fill="#3730a3">Explanation diagnostics</text>
+    <text x="565" y="188" font-size="15" fill="#3730a3">Hard to vary</text>
+    <text x="565" y="215" font-size="15" fill="#3730a3">Criticizability and risky tests</text>
+    <text x="565" y="242" font-size="13" fill="#3730a3">Reported, but not used to crown the winner.</text>
+
+    <path d="M458 193 H522" stroke="#334155" stroke-width="3" stroke-dasharray="8 8"/>
+    <text x="490" y="184" font-size="13" fill="#475569" text-anchor="middle">separate</text>
+  </g>
+</svg>
