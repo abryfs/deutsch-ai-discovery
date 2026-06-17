@@ -80,6 +80,20 @@ The benchmark report separates:
 - `avg explanation`: diagnostic score for hard-to-vary structure, criticizability, and error correction.
 - `failure cases`: seeds where the Deutsch critique loop did not win.
 
+## Run A Real Model
+
+The next step is to replace heuristic agents with real models through an OpenRouter-compatible endpoint. If you have a GCP VM exposing OpenRouter-compatible `/chat/completions`, point the runner at it with environment variables:
+
+```bash
+export OPENROUTER_BASE_URL="https://your-vm.example.com/api/v1"
+export OPENROUTER_API_KEY="your-key"
+export OPENROUTER_MODEL="openai/gpt-4o-mini"
+
+python3 -m deutsch_ai_discovery.real_model --seed 17 --opaque-public
+```
+
+This writes a real-model report and the full prompt/response transcript under `reports/`. The model sees public observations and unlabeled cases only. The hidden oracle scores predictions afterward.
+
 ## Agents Compared
 
 The harness compares four agents:
@@ -93,4 +107,4 @@ The harness compares four agents:
 
 The current agents are still hand-built heuristics, not real LLM agents. The hypothesis space is wider than the first version, but it is still supplied by the benchmark designer. This project currently tests the structure of a Deutsch-style discovery loop more than it proves autonomous AI discovery.
 
-The next serious step is to connect real LLM agents to the same sealed oracle while preserving the hidden-world boundary and full prompt transcripts.
+The real-model runner is the first bridge to LLM testing, but it is still a single-pass predictor. The next serious step is a multi-round LLM loop where the model proposes risky tests, receives oracle results, and revises its explanation without seeing the hidden rule.

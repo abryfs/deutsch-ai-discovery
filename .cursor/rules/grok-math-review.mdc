@@ -1,0 +1,10 @@
+---
+description: Get Grok review for mathematical and evaluation work
+alwaysApply: true
+---
+
+# Grok Math Review
+
+For mathematical, statistical, benchmark, scoring, evaluation, or experimental-validity tasks in this project, ask a Grok subagent for an independent opinion before finalizing the change.
+
+Use the Grok review to look for metric leakage, biased scoring, invalid aggregation, weak baselines, hidden assumptions, and failure cases. Treat the review as advice, not authority.
